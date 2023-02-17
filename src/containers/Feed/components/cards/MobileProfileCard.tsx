@@ -6,6 +6,11 @@ type Props = {
   className?: string
 }
 
+const getProfileImage = () => {
+  const random = Math.ceil(Math.random()*CONFIG.profile.maxNum);
+  return CONFIG.profile.image + random + CONFIG.profile.ext;
+}
+
 const MobileProfileCard: React.FC<Props> = () => {
   return (
     <div className="block lg:hidden">
@@ -13,7 +18,7 @@ const MobileProfileCard: React.FC<Props> = () => {
       <div className="p-2 rounded-2xl bg-white dark:bg-zinc-700 mb-4">
         <div className="flex items-center gap-2">
           <Image
-            src={CONFIG.profile.image}
+            src={getProfileImage()}
             width={90}
             height={90}
             alt="profile_image"
