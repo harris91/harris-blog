@@ -116,3 +116,215 @@ nav {
     overflow-x: hidden;
   }
 }
+
+
+blockquote p {
+  font-size: 0.3em !important;
+}
+
+/* Pretandard 폰트 적용 */
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('../fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+}
+
+
+/* Kakao FE 코드 박스 CSS */
+.gatsby-highlight-code-line {
+  background-color: #022a4b;
+  border-left: .35em solid #0687f0;
+  display: block;
+  margin-left: -1.2em;
+  margin-right: -1.2em;
+  padding-left: .75em;
+  padding-right: 1em
+}
+
+code[class*=language-],pre[class*=language-] {
+  text-shadow: none !important;
+  word-wrap: normal;
+  -ms-overflow-style: none;
+  background: none;
+  color: #e0e0e0 !important;
+  font-family: Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+  font-size: .95em;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  line-height: 1.6;
+  overflow: -moz-scrollbars-none;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  text-align: left;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal
+}
+
+pre[class*=language-]::-webkit-scrollbar {
+  text-shadow: none !important;
+  display: none
+}
+
+pre[class*=language-] {
+  border-radius: .6em;
+  margin: 1.5em 0;
+  overflow: auto;
+  text-shadow: none !important;
+  padding: 1.2em
+}
+
+@media screen and (max-width: 730px) {
+  pre[class*=language-] {
+      border-radius:0;
+      margin: 1.5em -1.2rem;
+      text-shadow: none !important;
+  }
+}
+
+:not(pre)>code[class*=language-],pre[class*=language-] {
+  background: #242323 !important;
+  text-shadow: none !important;
+}
+
+:not(pre)>code[class*=language-] {
+  background: #f0f0f0;
+  border-radius: .3em;
+  color: #444;
+  font-size: .85em;
+  margin: 0 .1em;
+  padding: .11em .3em;
+  white-space: normal
+}
+
+.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog {
+  color: #616161 !important;
+}
+
+.token.punctuation {
+  color: #e0e0e0 !important;
+}
+
+.token.attr-name,.token.deleted,.token.namespace,.token.tag {
+  color: #e2777a !important;
+}
+
+.token.function-name {
+  color: #6196cc !important;
+}
+
+.token.boolean,.token.function,.token.number {
+  color: #ff9100 !important;
+}
+
+.token.class-name,.token.constant,.token.property,.token.symbol {
+  color: #ff0 !important;
+}
+
+.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector {
+  color: #b388ff !important;
+}
+
+.token.attr-value,.token.char,.token.regex,.token.string,.token.variable {
+  color: #00e676 !important;
+}
+
+.token.entity,.token.operator,.token.url {
+  color: #67cdcc !important;
+  background: none !important;
+}
+
+.token.bold,.token.important {
+  font-weight: 700
+}
+
+.token.italic {
+  font-style: italic
+}
+
+.token.entity {
+  cursor: help
+}
+
+.token.inserted {
+  color: green
+}
+
+blockquote {
+  border-left: none;
+  font-weight: 300;
+  margin-top: 12px;
+  padding: 12px 8px 0 22px;
+  position: relative
+}
+
+blockquote:before {
+  background-color: #eee;
+  content: "";
+  display: inline-block;
+  height: calc(100% - 12px);
+  left: 4px;
+  position: absolute;
+  top: 14px;
+  width: 4px;
+  z-index: 1
+}

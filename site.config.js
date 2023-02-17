@@ -1,8 +1,10 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "HARRIS",
-    image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    name: "HARRIS91",
+    image: "/emoji/profile", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    ext: ".png",
+    maxNum: 5,
     role: "full-stack developer",
     bio: "I develop everything using node.",
     email: "harris91@kakao.com",
@@ -18,7 +20,7 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "harris91",
+    title: "HARRIS91",
     description: "welcome to harris-log!",
     theme: "light", // ['light', 'dark', 'auto']
   },
@@ -34,7 +36,7 @@ const CONFIG = {
 
   // notion configuration (required)
   notionConfig: {
-    pageId: process.env.NOTION_PAGE_ID,
+    pageId: '4b212e6603474684a6a4f5016d1e9213',
   },
 
   // plugin configuration (optional)
