@@ -317,23 +317,3 @@ pre[class*=language-] {
 .token.inserted {
   color: green
 }
-
-blockquote {
-  border-left: none;
-  font-weight: 300;
-  margin-top: 12px;
-  padding: 12px 8px 0 22px;
-  position: relative
-}
-
-blockquote:before {
-  background-color: #eee;
-  content: "";
-  display: inline-block;
-  height: calc(100% - 12px);
-  left: 4px;
-  position: absolute;
-  top: 14px;
-  width: 4px;
-  z-index: 1
-}
