@@ -43,13 +43,13 @@ const CONFIG = {
   googleAnalytics: {
     enable: true,
     config: {
-      measurementId: process.env.GOOGLE_MEASUREMENT_ID || "",
+      measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
     },
   },
   googleSearchConsole: {
     enable: true,
     config: {
-      siteVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
+      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     },
   },
   utterances: {
@@ -67,6 +67,6 @@ const CONFIG = {
       appid: "", // Embed Code -> data-app-id value
     },
   },
-  isProd: process.env.VERCEL_ENV === "production", // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  isProd: process.env.NODE_ENV === "production", // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
 }
 module.exports = CONFIG
