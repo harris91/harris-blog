@@ -52,6 +52,12 @@ const CONFIG = {
       siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     },
   },
+  googleAdsense: {
+    enable: true,
+    config: {
+      client: process.env.NEXT_PUBLIC_GOOGLE_ADSENSE || "",
+    },
+  },
   utterances: {
     enable: true,
     config: {

@@ -36,6 +36,18 @@ class MyDocument extends Document {
               />
             </>
           )}
+
+          {/* Google Adsense */}
+          {CONFIG.googleAdsense.enable === true && (
+            <script async 
+            src={
+              "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="
+              + CONFIG.googleAdsense.config.client
+            }
+            crossOrigin="anonymous">
+            </script>
+          )}
+          
         </Head>
         <body className="bg-day dark:bg-night">
           <Main />
