@@ -1,4 +1,7 @@
-# morethan-log
+# Harris91 - Blog
+> ### 'harris-log' was customized from the open source of 'morethan-log'.
+
+<br>
 
 <img width="1715" alt="image" src="https://user-images.githubusercontent.com/72514247/209824600-ca9c8acc-6d2d-4041-9931-43e34b8a9a5f.png">
 
@@ -47,18 +50,7 @@ Check out the [Contributing Guide](.github/CONTRIBUTING.md).
 
 ## Support
 
-morethan-log is an MIT-licensed open source project. It can grow thanks to the sponsors and support from the amazing backers.
-
-### Sponsors
-
-<!--
-Sponsors template:
-<a href="https://github.com/{uesrname}"><img src="{src}" width="50px" alt="{username}" /></a>&nbsp;&nbsp;
--->
-
-<p>
-<a href="https://github.com/siyeons"><img src="https://avatars.githubusercontent.com/u/35549653?v=4" width="50px" alt="siyeons" /></a>&nbsp;&nbsp;
-</p>
+morethan-log is an MIT-licensed open source project. 
 
 ## License
 
