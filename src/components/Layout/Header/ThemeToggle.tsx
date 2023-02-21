@@ -22,6 +22,20 @@ const ThemeToggle: React.FC<Props> = () => {
     changedTheme === "dark"
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark")
+
+
+    //댓글창 Theme 변경
+    if(CONFIG.utterances.enable) {
+      const utterances = document.querySelector('iframe');
+      if(utterances) {
+        const message = {
+          type: 'set-theme',
+          theme: `github-${getTheme()}`
+        }
+        utterances?.contentWindow?.postMessage(message, 'https://utteranc.es')
+      }
+    }
+    
   }
 
   if (CONFIG.blog.theme !== "auto") return null
@@ -30,6 +44,7 @@ const ThemeToggle: React.FC<Props> = () => {
       {theme === "light" ? <RiSunFill/> : <RiMoonFill/>}
     </div>
   )
+
 }
 
 export default ThemeToggle

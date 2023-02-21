@@ -65,7 +65,7 @@ const CONFIG = {
   utterances: {
     enable: true,
     config: {
-      repo: "harris91/harris-log",
+      repo: "harris91/harris-blog",
       "issue-term": "og:title",
       label: "💬 Utterances",
     },

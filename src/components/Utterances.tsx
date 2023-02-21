@@ -1,5 +1,6 @@
 import CONFIG from "site.config"
 import { useEffect } from "react"
+import { getTheme } from "@hooks/useThemeEffect"
 
 //TODO: useRef?
 
@@ -9,7 +10,7 @@ type Props = {
 
 const Utterances: React.FC<Props> = ({ issueTerm }) => {
   useEffect(() => {
-    const theme = "github-light"
+    const theme = `github-${getTheme()}`
     // 'github-dark'
     const script = document.createElement("script")
     const anchor = document.getElementById("comments")
@@ -29,9 +30,10 @@ const Utterances: React.FC<Props> = ({ issueTerm }) => {
       anchor.innerHTML = ""
     }
   })
+
   return (
     <>
-      <div id="comments" className="md:-ml-16">
+      <div id="comments" className="md:-ml-10 max-w-full">
         <div className="utterances-frame"></div>
       </div>
     </>
