@@ -76,8 +76,14 @@ pre[class*="language-"] {
 .notion-quote {
   padding: 0.2em 0.9em;
   font-size: 1.0em;
-  box-shadow: 4px 4px 8px #ccc;
-  background: #f7f7f7;
+  font-style:italic;
+  /* box-shadow: 4px 4px 8px #ccc;
+  background: #f7f7f7; */
+}
+
+.notion-link {
+  color:#ae2cf1;
+  border-color:#ae2cf1;
 }
 
 .notion-inline-code {

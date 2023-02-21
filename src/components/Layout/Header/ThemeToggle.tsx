@@ -2,6 +2,7 @@ import CONFIG from "@/site.config"
 import { ThemeType } from "@/src/types"
 import { getTheme } from "@hooks/useThemeEffect"
 import React, { useEffect, useState } from "react"
+import { RiSunFill, RiMoonFill} from "react-icons/ri";
 
 type Props = {}
 
@@ -26,7 +27,7 @@ const ThemeToggle: React.FC<Props> = () => {
   if (CONFIG.blog.theme !== "auto") return null
   return (
     <div className={`cursor-pointer dark:text-gray-50`} onClick={handleClick}>
-      {theme === "light" ? "☀️" : "🌙"}
+      {theme === "light" ? <RiSunFill/> : <RiMoonFill/>}
     </div>
   )
 }

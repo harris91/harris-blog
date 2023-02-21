@@ -251,8 +251,9 @@ pre[class*=language-] {
 }
 
 :not(pre)>code[class*=language-],pre[class*=language-] {
-  background: #242323 !important;
+  background: #1f1f1f !important;
   text-shadow: none !important;
+  border: 0.5px solid #444 !important;
 }
 
 :not(pre)>code[class*=language-] {

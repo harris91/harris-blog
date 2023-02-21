@@ -22,7 +22,7 @@ const CONFIG = {
   blog: {
     title: "HARRIS91",
     description: "welcome to harris-log!",
-    theme: "light", // ['light', 'dark', 'auto']
+    theme: "auto", // ['light', 'dark', 'auto']
   },
 
   // CONFIG configration (required)
