@@ -23,6 +23,13 @@ const ThemeToggle: React.FC<Props> = () => {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark")
 
+    
+    // 상단 테마 변경
+    const metaTheme = document.querySelector('meta[name="theme-color"]')?.getAttribute('content');
+    if(metaTheme) {
+      const themeColor = { light: "#f1f3f5", dark: "#18181B" }
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColor[getTheme()]);
+    }
 
     //댓글창 Theme 변경
     if(CONFIG.utterances.enable) {
@@ -35,7 +42,7 @@ const ThemeToggle: React.FC<Props> = () => {
         utterances?.contentWindow?.postMessage(message, 'https://utteranc.es')
       }
     }
-    
+
   }
 
   if (CONFIG.blog.theme !== "auto") return null
