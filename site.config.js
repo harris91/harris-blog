@@ -2,9 +2,13 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "HARRIS91",
-    image: "/emoji/profile", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    image: "/emoji/profile3.png", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+
+    //Random Image set
+    randomImage: "/emoji/profile", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     ext: ".png",
     maxNum: 5,
+
     role: "full-stack developer",
     bio: "I develop everything using node.",
     email: "harris91@kakao.com",
