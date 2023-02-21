@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
 import CONFIG from "site.config"
+import { getMetaTheme } from "@hooks/useThemeEffect"
 import CJK from "@libs/cjk"
 
 class MyDocument extends Document {
@@ -25,7 +26,7 @@ class MyDocument extends Document {
             href="/feed"
           ></link>
           {/* theme setting */}
-          <meta name="theme-color" content={"#f1f3f5"} />
+          <meta name="theme-color" content={getMetaTheme()} />
 
           {/* google search console */}
           {CONFIG.googleSearchConsole.enable === true && (

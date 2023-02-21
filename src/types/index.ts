@@ -27,3 +27,4 @@ export type TTags = {
 }
 
 export type ThemeType = "dark" | "light"
+export type MetaThemeType = "#18181B" | "#f1f3f5"
