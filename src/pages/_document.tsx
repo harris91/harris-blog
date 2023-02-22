@@ -2,6 +2,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document"
 import CONFIG from "site.config"
 import { getMetaTheme } from "@hooks/useThemeEffect"
 import CJK from "@libs/cjk"
+import Meta from '@components/Meta'
 
 class MyDocument extends Document {
   render() {
@@ -26,7 +27,17 @@ class MyDocument extends Document {
             href="/feed"
           ></link>
           {/* theme setting */}
-          <meta name="theme-color" content={getMetaTheme()} />
+          <Meta
+            name="theme-color"
+            content="#ffffff"
+            media="(prefers-color-scheme: light)"
+          />
+
+          <Meta
+            name="theme-color"
+            content="#121826"
+            media="(prefers-color-scheme: dark)"
+          />
           {/* <meta name="apple-mobile-web-app-capable" content="yes" /> */}
           {/* <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> */}
 

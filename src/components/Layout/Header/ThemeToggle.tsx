@@ -16,6 +16,11 @@ const ThemeToggle: React.FC<Props> = () => {
   }, [])
 
   const handleClick = () => {
+    // 상단 테마 변경
+    document.querySelector('meta[name="theme-color"]')
+    ?.setAttribute('media', `(prefers-color-scheme:${getTheme()})`);
+    
+    // 전체 테마 변경
     const changedTheme = getTheme() !== "dark" ? "dark" : "light"
     localStorage.setItem("theme", changedTheme)
     setTheme(changedTheme)
@@ -23,21 +28,13 @@ const ThemeToggle: React.FC<Props> = () => {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark")
 
-    
-    // 상단 테마 변경
-    const metaTheme = document.querySelector('meta[name="theme-color"]')?.getAttribute('content');
-    if(metaTheme) {
-      const themeColor = { light: "#f1f3f5", dark: "#18181B" }
-      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColor[getTheme()]);
-    }
-
     //댓글창 Theme 변경
     if(CONFIG.utterances.enable) {
       const utterances = document.querySelector('iframe');
       if(utterances) {
         const message = {
           type: 'set-theme',
-          theme: `github-${getTheme()}`
+          theme: `github-${changedTheme}`
         }
         utterances?.contentWindow?.postMessage(message, 'https://utteranc.es')
       }

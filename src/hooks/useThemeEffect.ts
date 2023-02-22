@@ -20,13 +20,13 @@ export const getMetaTheme: () => MetaThemeType = () => {
   const themeConfig = CONFIG.blog.theme as "auto" & ThemeType
   if (themeConfig !== "auto") return themeConfig
   
-  if(typeof localStorage == 'undefined'){ return "#18181B" }
+  if(typeof localStorage == 'undefined'){ return "#121826" }
   else if (
     localStorage?.theme === "dark" ||
     (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    return "#18181B"
+    return "#121826"
   } else {
     return "#f1f3f5"
   }
@@ -40,7 +40,7 @@ const useThemeEffect = () => {
     } else {
       document.documentElement.classList.remove("dark")
     }
-    
+
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', getMetaTheme());
   }, [])
 }
