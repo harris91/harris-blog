@@ -8,7 +8,7 @@ type Props = {
 const CustomError: React.FC<Props> = ({ errorType }) => {
   return (
     <div
-      className={`m-auto max-w-4xl bg-white dark:bg-gray-800 rounded-3xl py-12 px-6 shadow-md`}
+      className={`m-auto max-w-4xl bg-white dark:bg-gray-800 rounded-xl py-12 px-6 shadow-md`}
     >
       <div className="py-20 flex flex-col items-center gap-10">
         <div className="text-6xl flex  items-center">

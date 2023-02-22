@@ -17,7 +17,9 @@ const PostCard: React.FC<Props> = ({ post }) => {
       <a>
         <article
           key={post.id}
-          className="overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow "
+          className="overflow-hidden mb-2 md:mb-3 rounded-md bg-white dark:bg-gray-800 hover:shadow-md 
+          dark:hover:shadow-gray-700/50 dark:hover:md:shadow-gray-700/40
+          transition-shadow"
         >
           {post.thumbnail && (
             <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-gray-800 ">
