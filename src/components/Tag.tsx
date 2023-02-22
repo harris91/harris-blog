@@ -12,12 +12,11 @@ const Tag: React.FC<Props> = ({ children }) => {
     router.push(`/?tag=${value}`)
   }
   return (
-    <div
+    <a 
       onClick={() => handleClick(children)}
-      className="text-xs text-gray-500 font-normal rounded-full bg-gray-200 px-2 py-1 cursor-pointer"
-    >
-      {children}
-    </div>
+      className="mr-1 mb-2 text-xs md:text-sm font-medium uppercase text-sky-500 hover:text-sky-600 dark:hover:text-sky-400">
+        {children}
+    </a>
   )
 }
 

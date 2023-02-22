@@ -17,8 +17,9 @@ const PostCard: React.FC<Props> = ({ post }) => {
       <a>
         <article
           key={post.id}
-          className="overflow-hidden mb-2 md:mb-3 rounded-md bg-white dark:bg-gray-800 hover:shadow-md 
-          dark:hover:shadow-gray-700/50 dark:hover:md:shadow-gray-700/40
+          className="overflow-hidden mb-2 md:mb-3 rounded-md bg-white hover:shadow-md 
+          dark:bg-gray-900 
+          dark:hover:border-solid dark:hover:bg-gray-800 dark:hover:rounded-xs
           transition-shadow"
         >
           {post.thumbnail && (
@@ -33,10 +34,22 @@ const PostCard: React.FC<Props> = ({ post }) => {
           )}
           <div className="p-4">
             <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-              <h2 className="text-lg md:text-xl font-medium mb-2 cursor-pointer text-black dark:text-gray-100">
+              <h2 className="text-xl md:text-2xl font-medium cursor-pointer text-black dark:text-gray-100">
                 {post.title}
               </h2>
             </header>
+            <div className="flex gap-2">
+              {post.tags &&
+                post.tags.map((tag: string, idx: number) => (
+                  <Tag key={idx}>{tag}</Tag>
+                ))}
+            </div>
+            
+            <main className="mb-4">
+              <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-400">
+                {post.summary}
+              </p>
+            </main>
             <div className="flex items-center gap-2 mb-4">
               {/* {post.author && post.author[0] && (
                 <>
@@ -56,23 +69,12 @@ const PostCard: React.FC<Props> = ({ post }) => {
                   <div className="self-stretch w-px my-1 bg-gray-300"></div>
                 </>
               )} */}
-              <div className="text-sm text-gray-500 dark:text-gray-400 md:ml-0">
+              <div className="text-sm text-gray-500 dark:text-gray-400">
                 {formatDate(
                   post?.date?.start_date || post.createdTime,
                   CONFIG.lang
                 )}
               </div>
-            </div>
-            <main className="mb-4">
-              <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
-                {post.summary}
-              </p>
-            </main>
-            <div className="flex gap-2">
-              {post.tags &&
-                post.tags.map((tag: string, idx: number) => (
-                  <Tag key={idx}>{tag}</Tag>
-                ))}
             </div>
           </div>
         </article>
