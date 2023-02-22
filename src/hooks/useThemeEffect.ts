@@ -40,6 +40,8 @@ const useThemeEffect = () => {
     } else {
       document.documentElement.classList.remove("dark")
     }
+    
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', getMetaTheme());
   }, [])
 }
 
