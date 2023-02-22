@@ -8,12 +8,13 @@ type Props = {
 const Tag: React.FC<Props> = ({ children }) => {
   const router = useRouter()
 
-  const handleClick = (value: string) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement, MouseEvent>, value: string) => {
+    event.nativeEvent.stopImmediatePropagation()
     router.push(`/?tag=${value}`)
   }
   return (
     <a 
-      onClick={() => handleClick(children)}
+      onClick={(event) => handleClick(event, children)}
       className="mr-1 mb-2 text-xs md:text-sm font-medium uppercase text-sky-500 hover:text-sky-600 dark:hover:text-sky-400">
         {children}
     </a>
