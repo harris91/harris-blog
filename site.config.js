@@ -7,7 +7,7 @@ const CONFIG = {
     //Random Image set
     randomImage: "/emoji/profile", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     ext: ".png",
-    maxNum: 5,
+    maxNum: 6,
 
     role: "full-stack developer",
     bio: "I develop everything using node.",

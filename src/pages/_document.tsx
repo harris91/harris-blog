@@ -27,6 +27,8 @@ class MyDocument extends Document {
           ></link>
           {/* theme setting */}
           <meta name="theme-color" content={getMetaTheme()} />
+          {/* <meta name="apple-mobile-web-app-capable" content="yes" /> */}
+          {/* <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> */}
 
           {/* google search console */}
           {CONFIG.googleSearchConsole.enable === true && (
