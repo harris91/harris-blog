@@ -10,9 +10,9 @@ const initialOption: Options = {
   acceptType: ["Post"],
 }
 const current = new Date()
-// const tomorrow = new Date(current)
-// tomorrow.setDate(tomorrow.getDate() + 1)
-// tomorrow.setHours(0, 0, 0, 0)
+const tomorrow = new Date(current)
+tomorrow.setDate(tomorrow.getDate() + 1)
+tomorrow.setHours(0, 0, 0, 0)
 
 export function filterPosts(posts: TPosts, options: Options = initialOption) {
   const { acceptStatus = ["Public"], acceptType = ["Post"] } = options
@@ -20,7 +20,7 @@ export function filterPosts(posts: TPosts, options: Options = initialOption) {
     // filter data
     .filter((post) => {
       const postDate = new Date(post?.date?.start_date || post.createdTime)
-      if (!post.title || !post.slug || postDate > current) return false
+      if (!post.title || !post.slug || postDate > tomorrow) return false
       return true
     })
     // filter status

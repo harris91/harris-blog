@@ -38,7 +38,9 @@ class MyDocument extends Document {
             content="#121826"
             media="(prefers-color-scheme: dark)"
           />
-          {/* <meta name="apple-mobile-web-app-capable" content="yes" /> */}
+
+          {/* 홈화면 등록 시 앱 프로세스화 */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
           {/* <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> */}
 
           {/* google search console */}
