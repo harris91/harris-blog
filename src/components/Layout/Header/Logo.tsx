@@ -1,4 +1,5 @@
 import React from "react"
+import { useRouter } from 'next/router'
 import Link from "next/link"
 import CONFIG from "site.config"
 
@@ -8,9 +9,16 @@ import profile from 'public/emoji/profile3.png'
 type Props = {}
 
 const Logo: React.FC<Props> = () => {
+  const router = useRouter();
+  
+  const clickLogo = () => {
+    if(location.pathname === '/') location.reload();
+    else router.push('/');
+  }
+
   return (
-    <Link href="/">
-      <a aria-label={CONFIG.blog.title}>
+    // <Link href="/">
+      <a aria-label={CONFIG.blog.title} onClick={clickLogo}>
         <div className="flex items-center">
           <div className="mt-1">
             <Image
@@ -27,7 +35,7 @@ const Logo: React.FC<Props> = () => {
           </div>
         </div>
       </a>
-    </Link>
+    // </Link>
   )
 }
 
