@@ -241,6 +241,7 @@ pre[class*=language-] {
   padding: 1.2em
 }
 
+/* //포스트 코드박스 css
 @media screen and (max-width: 730px) {
   pre[class*=language-] {
       border-radius: .3rem;
@@ -249,6 +250,7 @@ pre[class*=language-] {
       text-shadow: none !important;
   }
 }
+*/
 
 :not(pre)>code[class*=language-],pre[class*=language-] {
   background: #1f2937 !important;
