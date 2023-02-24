@@ -10,8 +10,8 @@ type Props = {
 }
 
 const PostCard: React.FC<Props> = ({ post }) => {
-  if (post.thumbnail) {
-  }
+  // if (post.thumbnail) {}
+
   return (
     <Link href={`/${post.slug}`}>
       <a>
@@ -19,7 +19,6 @@ const PostCard: React.FC<Props> = ({ post }) => {
           key={post.id}
           className="overflow-hidden mb-2 md:mb-3 rounded-md bg-white hover:shadow-md 
           dark:bg-gray-900 
-          dark:hover:border-solid dark:hover:bg-gray-800 dark:hover:rounded-xs
           transition-shadow"
         >
           {post.thumbnail && (
@@ -32,12 +31,13 @@ const PostCard: React.FC<Props> = ({ post }) => {
               />
             </div>
           )}
-          <div className="p-4">
+          <div className="p-1 md:p-4">
             <header className="flex flex-col justify-between md:flex-row md:items-baseline">
               <h2 className="text-xl md:text-2xl font-medium cursor-pointer text-black dark:text-gray-100">
                 {post.title}
               </h2>
             </header>
+
             <div className="flex gap-2">
               {post.tags &&
                 post.tags.map((tag: string, idx: number) => (
@@ -45,8 +45,8 @@ const PostCard: React.FC<Props> = ({ post }) => {
                 ))}
             </div>
             
-            <main className="mb-4">
-              <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-400">
+            <main className="mb-2 md:mb-4">
+              <p className="leading-tight md:leading-8 text-sm md:text-base text-gray-700 dark:text-gray-400">
                 {post.summary}
               </p>
             </main>
