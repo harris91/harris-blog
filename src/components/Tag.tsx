@@ -9,7 +9,7 @@ const Tag: React.FC<Props> = ({ children }) => {
   const router = useRouter()
 
   const handleClick = (event: React.MouseEvent<HTMLElement, MouseEvent>, value: string) => {
-    event.nativeEvent.stopImmediatePropagation()
+    //event.nativeEvent.stopImmediatePropagation()
     router.push(`/?tag=${value}`)
   }
   return (
