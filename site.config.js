@@ -26,7 +26,14 @@ const CONFIG = {
   blog: {
     title: "HARRIS91",
     description: "welcome to harris-log!",
+
+    //테마
     theme: "auto", // ['light', 'dark', 'auto']
+    themeToggle: true,
+    themeColor: {
+      dark: "#121826",
+      light: "#f1f3f5"
+    },
   },
 
   // CONFIG configration (required)

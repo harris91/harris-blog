@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
 import CONFIG from "site.config"
-import { getMetaTheme } from "@hooks/useThemeEffect"
 import CJK from "@libs/cjk"
 import Meta from '@components/Meta'
 
@@ -27,17 +26,12 @@ class MyDocument extends Document {
             href="/feed"
           ></link>
           {/* theme setting */}
-          <Meta
-            name="theme-color"
-            content="#ffffff"
-            media="(prefers-color-scheme: light)"
-          />
+          {/* 
+          <Meta name="theme-color" content={CONFIG.blog.themeColor.light} media="(prefers-color-scheme: light)" />
+          <Meta name="theme-color" content={CONFIG.blog.themeColor.dark} media="(prefers-color-scheme: dark)"/> 
+          */}
 
-          <Meta
-            name="theme-color"
-            content="#121826"
-            media="(prefers-color-scheme: dark)"
-          />
+          <meta name="theme-color" content={CONFIG.blog.themeColor.dark} />
 
           {/* 홈화면 등록 시 앱 프로세스화 */}
           <meta name="apple-mobile-web-app-capable" content="yes" />

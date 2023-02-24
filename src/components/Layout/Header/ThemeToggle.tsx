@@ -11,23 +11,23 @@ const ThemeToggle: React.FC<Props> = () => {
 
   useEffect(() => {
     if (typeof window === "object") {
-      setTheme(getTheme())
+      setTheme(getTheme()) 
     }
   }, [])
 
   const handleClick = () => {
-    // 상단 테마 변경
-    document.querySelector('meta[name="theme-color"]')
-    ?.setAttribute('media', `(prefers-color-scheme:${getTheme()})`);
     
     // 전체 테마 변경
     const changedTheme = getTheme() !== "dark" ? "dark" : "light"
     localStorage.setItem("theme", changedTheme)
     setTheme(changedTheme)
     changedTheme === "dark"
-      ? document.documentElement.classList.add("dark")
-      : document.documentElement.classList.remove("dark")
-
+    ? document.documentElement.classList.add("dark")
+    : document.documentElement.classList.remove("dark")
+    
+    // 상단 테마 변경
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', CONFIG.blog.themeColor[changedTheme]);
+    
     //댓글창 Theme 변경
     if(CONFIG.utterances.enable) {
       const utterances = document.querySelector('iframe');
@@ -42,13 +42,13 @@ const ThemeToggle: React.FC<Props> = () => {
 
   }
 
-  if (CONFIG.blog.theme !== "auto") return null
+  if (!CONFIG.blog.themeToggle) return null;
+  
   return (
     <div className={`cursor-pointer dark:text-gray-50`} onClick={handleClick}>
       {theme === "light" ? <RiSunFill/> : <RiMoonFill/>}
     </div>
   )
-
 }
 
 export default ThemeToggle
