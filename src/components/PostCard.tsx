@@ -69,7 +69,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
                   <div className="self-stretch w-px my-1 bg-gray-300"></div>
                 </>
               )} */}
-              <div className="text-sm text-gray-500 dark:text-gray-400">
+              <div className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
                 {formatDate(
                   post?.date?.start_date || post.createdTime,
                   CONFIG.lang
