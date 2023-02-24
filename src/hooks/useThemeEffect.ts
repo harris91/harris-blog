@@ -19,7 +19,7 @@ export const getTheme: () => ThemeType = () => {
 const useThemeEffect = () => {
   useEffect(() => {
     if (typeof document !== "object") return
-    
+
     if (getTheme() === "dark") {
       document.documentElement.classList.add("dark")
       document.querySelector('meta[name="theme-color"]')?.setAttribute('content', CONFIG.blog.themeColor.dark);

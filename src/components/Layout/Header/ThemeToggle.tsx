@@ -12,21 +12,35 @@ const ThemeToggle: React.FC<Props> = () => {
   useEffect(() => {
     if (typeof window === "object") {
       setTheme(getTheme()) 
+
+      // 자동 테마
+      window.matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', event => {
+        if(!("theme" in localStorage)) {
+          const changedTheme = event.matches ? "dark" : "light";
+          setTheme(changedTheme);
+          setThemeClass(changedTheme)
+          console.log("Changed System Theme: ", changedTheme); // "dark" or "light"
+        }
+      });
     }
   }, [])
 
-  const handleClick = () => {
-    
-    // 전체 테마 변경
-    const changedTheme = getTheme() !== "dark" ? "dark" : "light"
-    localStorage.setItem("theme", changedTheme)
-    setTheme(changedTheme)
+  const setThemeClass = (changedTheme:ThemeType) => {
     changedTheme === "dark"
     ? document.documentElement.classList.add("dark")
     : document.documentElement.classList.remove("dark")
     
     // 상단 테마 변경
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', CONFIG.blog.themeColor[changedTheme]);
+  }
+
+  const handleClick = () => {
+    // 전체 테마 변경
+    const changedTheme = getTheme() !== "dark" ? "dark" : "light"
+    localStorage.setItem("theme", changedTheme)
+    setTheme(changedTheme)
+    setThemeClass(changedTheme)
     
     //댓글창 Theme 변경
     if(CONFIG.utterances.enable) {
@@ -39,11 +53,9 @@ const ThemeToggle: React.FC<Props> = () => {
         utterances?.contentWindow?.postMessage(message, 'https://utteranc.es')
       }
     }
-
   }
 
   if (!CONFIG.blog.themeToggle) return null;
-  
   return (
     <div className={`cursor-pointer dark:text-gray-50`} onClick={handleClick}>
       {theme === "light" ? <RiSunFill/> : <RiMoonFill/>}
