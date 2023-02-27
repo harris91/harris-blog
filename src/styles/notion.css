@@ -1,7 +1,7 @@
 /* NOTION CSS OVERRIDE */
 
 .notion {
-  font-family: Pretendard, Roboto, sans-serif !important;
+  font-family: Pretendard Variable, Roboto, sans-serif !important;
   @apply text-gray-600 dark:text-gray-300;
   overflow-wrap: break-word;
 }
@@ -87,7 +87,7 @@ pre[class*="language-"] {
 }
 
 .notion-inline-code {
-  font-family: Pretendard, Roboto, sans-serif !important;
+  font-family: Pretendard Variable, Roboto, sans-serif !important;
 }
 
 .notion-collection {

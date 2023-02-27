@@ -8,11 +8,19 @@ class MyDocument extends Document {
     return (
       <Html lang={CONFIG.lang}>
         <Head>
-          <link
+          {/* <link
             rel="preload"
             as="font"
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
-          />
+          /> */}
+
+          {/* pretendard 폰트 적용 */}
+          <link 
+            rel="stylesheet" 
+            as="style" 
+            crossOrigin="true" 
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="profile-icon"

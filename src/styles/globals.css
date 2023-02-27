@@ -1,4 +1,5 @@
 /* Pretandard 폰트 적용 */
+/*
 @font-face {
 	font-family: 'Pretendard Variable';
 	font-weight: 45 920;
@@ -70,13 +71,14 @@
     font-weight: 900;
     font-display: swap;
 }
+*/
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  font-family: Pretendard, Roboto, sans-serif;
+  font-family: Pretendard Variable, Roboto, sans-serif;
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
 }
