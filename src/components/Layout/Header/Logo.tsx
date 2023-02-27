@@ -18,7 +18,7 @@ const Logo: React.FC<Props> = () => {
 
   return (
     // <Link href="/">
-      <a aria-label={CONFIG.blog.title} onClick={clickLogo}>
+      <span aria-label={CONFIG.blog.title} onClick={clickLogo}>
         <div className="flex items-center">
           <div className="mt-1">
             <Image
@@ -34,7 +34,7 @@ const Logo: React.FC<Props> = () => {
             {CONFIG.blog.title}
           </div>
         </div>
-      </a>
+      </span>
     // </Link>
   )
 }

@@ -14,7 +14,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
 
   return (
     <Link href={`/${post.slug}`}>
-      <a>
+      <span>
         <article
           key={post.id}
           className="overflow-hidden mb-2 md:mb-3 rounded-md bg-white hover:shadow-md 
@@ -78,7 +78,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
             </div>
           </div>
         </article>
-      </a>
+      </span>
     </Link>
   )
 }

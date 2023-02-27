@@ -63,7 +63,7 @@ pre[class*="language-"] {
   z-index: -10;
 }
 .notion-asset-caption {
-  @apply text-center;
+  /* @apply text-center; */
   @apply text-gray-500 dark:text-gray-400;
 }
 .notion-full-width {

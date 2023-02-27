@@ -30,7 +30,7 @@ const Header: React.FC<Props> = ({ tags }) => {
         <span className="text-sm align-text-top">({tags[currentTag]})</span>
       </div>
       <div className={`flex text-sm gap-2  `}>
-        <a
+        <span
           className={`cursor-pointer ${
             currentOrder === 'desc'
               ? 'text-black font-bold dark:text-white'
@@ -39,8 +39,8 @@ const Header: React.FC<Props> = ({ tags }) => {
           onClick={() => handleClickOrderBy('desc')}
         >
           Desc
-        </a>
-        <a
+        </span>
+        <span
           className={`cursor-pointer ${
             currentOrder === 'asc'
               ? 'text-black font-bold dark:text-white'
@@ -49,7 +49,7 @@ const Header: React.FC<Props> = ({ tags }) => {
           onClick={() => handleClickOrderBy('asc')}
         >
           Asc
-        </a>
+        </span>
       </div>
     </div>
   )

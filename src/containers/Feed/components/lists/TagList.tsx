@@ -33,7 +33,7 @@ const TagList: React.FC<Props> = ({ className, data }) => {
             }`}
             onClick={() => handleClickTag(key)}
           >
-            <a>{key}</a>
+            <span>{key}</span>
           </li>
         ))}
       </ul>

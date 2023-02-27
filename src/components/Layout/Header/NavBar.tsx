@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
             className="block ml-4 text-black dark:text-gray-50 nav"
           >
             <Link href={link.to}>
-              <a>{link.name}</a>
+              <span>{link.name}</span>
             </Link>
           </li>
         ))}
