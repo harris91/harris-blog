@@ -13,9 +13,9 @@ const SearchInput: React.FC<Props> = ({ ...props }) => {
         </div>
         <input
           className="rounded-md px-5 py-2 w-full 
-            bg-gray-200 focus:bg-white focus:shadow-md hover:bg-gray-200
-            dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-gray-500
-            dark:focus:bg-gray-300 dark:focus:text-gray-800
+            bg-gray-100 focus:shadow-md hover:bg-gray-100
+            dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700
+            dark:focus:bg-gray-600 dark:focus:text-gray-200
             outline-none pl-10"
           type="text"
           placeholder="keyword"

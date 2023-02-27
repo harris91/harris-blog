@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ tags }) => {
   }
 
   return (
-    <div className="flex border-b border-gray-300 mb-4 justify-between items-center ">
+    <div className="flex border-b border-gray-200 dark:border-gray-700 mb-4 justify-between items-center ">
       <div className="text-xl font-bold my-2 dark:text-white">
         {currentTag} Posts{' '}
         <span className="text-sm align-text-top">({tags[currentTag]})</span>

@@ -8,8 +8,8 @@ const NavBar: React.FC = () => {
         {links.map((link) => (
           <li
             key={link.id}
-            className="block ml-4 text-black dark:text-gray-50 nav"
-          >
+            className="block ml-4 text-black dark:text-gray-50 nav cursor-pointer 
+            hover:bg-gray-200 dark:hover:bg-gray-700 transition-all py-1 px-3 rounded-full">
             <Link href={link.to}>
               <span>{link.name}</span>
             </Link>

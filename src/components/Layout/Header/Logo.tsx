@@ -19,7 +19,7 @@ const Logo: React.FC<Props> = () => {
   return (
     // <Link href="/">
       <span aria-label={CONFIG.blog.title} onClick={clickLogo}>
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           <div className="mt-1">
             <Image
               src={profile}

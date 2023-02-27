@@ -57,8 +57,10 @@ const ThemeToggle: React.FC<Props> = () => {
 
   if (!CONFIG.blog.themeToggle) return null;
   return (
-    <div className={`cursor-pointer dark:text-gray-50`} onClick={handleClick}>
-      {theme === "light" ? <RiSunFill/> : <RiMoonFill/>}
+    <div 
+      className={`cursor-pointer dark:text-gray-50 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all p-2 rounded-full`} 
+      onClick={handleClick}>
+        {theme === "light" ? <RiSunFill/> : <RiMoonFill/>}
     </div>
   )
 }
