@@ -82,12 +82,14 @@ pre[class*="language-"] {
 }
 
 .notion-link {
-  color:#02A5E9;
-  border-color:#02A5E9;
+  color:rgb(14 165 233/var(--tw-text-opacity));
+  border-color:rgb(14 165 233/var(--tw-text-opacity));
 }
 
 .notion-inline-code {
   font-family: Pretendard Variable, Roboto, sans-serif !important;
+  color: #ff6d6d !important;
+  
 }
 
 .notion-collection {
@@ -110,5 +112,13 @@ pre[class*="language-"] {
 }
 
 .notion-hr {
-  border-top: 1px solid rgba(55, 53, 47, 0.16);
+  border-top: 1px solid rgb(64 64 64);
+}
+
+.notion b {
+  font-weight: 800;
+}
+
+.notion-simple-table td {
+  border: 1px solid rgb(68 68 68);
 }
