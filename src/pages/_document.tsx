@@ -39,7 +39,7 @@ class MyDocument extends Document {
           <Meta name="theme-color" content={CONFIG.blog.themeColor.dark} media="(prefers-color-scheme: dark)"/> 
           */}
 
-          {/* <meta name="theme-color" content={CONFIG.blog.themeColor.dark} /> */}
+          <meta name="theme-color" content={CONFIG.blog.themeColor.dark} />
 
           {/* 홈화면 등록 시 앱 프로세스화 */}
           <meta name="apple-mobile-web-app-capable" content="yes" />
