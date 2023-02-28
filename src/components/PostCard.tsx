@@ -22,7 +22,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
       <span>
         <article
           key={post.id}
-          className="overflow-hidden mb-2 md:mb-3 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 "
+          className="overflow-hidden mb-2 md:mb-3 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 "
         >
           {post.thumbnail && (
             <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-gray-800 ">
@@ -49,12 +49,12 @@ const PostCard: React.FC<Props> = ({ post }) => {
                 ))}
             </div>
             
-            <main className="mb-2 md:mb-2">
+            <main className="my-2 md:my-3">
               <p className="leading-tight md:leading-8 text-sm md:text-base text-gray-700 dark:text-gray-400">
                 {post.summary}
               </p>
             </main>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mt-6 mb-2">
               {/* {post.author && post.author[0] && (
                 <>
                   <div className="flex items-center gap-1">

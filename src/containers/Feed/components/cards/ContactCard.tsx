@@ -8,16 +8,19 @@ import {
 } from "react-icons/ai"
 
 const ContactCard: React.FC = () => {
+
+  const contactClass = "p-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md cursor-pointer flex items-center gap-3 text-gray-600 dark:text-white hover:text-black dark:hover:text-sky-500 "
+
   return (
     <>
-      <div className="p-1 mb-3 dark:text-white">💬 Contact</div>
-      <ul className="rounded-md bg-white dark:bg-gray-800 p-1 flex flex-col">
+      <div className="p-1 mt-10 mb-3 dark:text-white">💬 Contact</div>
+      <ul className="rounded-md dark:bg-gray-800 p-1 flex flex-col">
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
             rel="noreferrer"
             target="_blank"
-            className="p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white "
+            className={contactClass}
           >
             <AiOutlineGithub className="text-2xl" />
             <div className="text-sm">github</div>
@@ -28,7 +31,7 @@ const ContactCard: React.FC = () => {
             href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
             rel="noreferrer"
             target="_blank"
-            className="p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
+            className={contactClass}
           >
             <AiOutlineInstagram className="text-2xl" />
             <div className="text-sm">instagram</div>
@@ -39,7 +42,7 @@ const ContactCard: React.FC = () => {
             href={`mailto:${CONFIG.profile.email}`}
             rel="noreferrer"
             target="_blank"
-            className="overflow-hidden p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
+            className={contactClass}
           >
             <AiOutlineMail className="text-2xl flex-shrink-0" />
             <div className="text-sm">email</div>
@@ -50,7 +53,7 @@ const ContactCard: React.FC = () => {
             href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
             rel="noreferrer"
             target="_blank"
-            className="  overflow-hidden p-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
+            className={contactClass}
           >
             <AiFillLinkedin className="text-2xl flex-shrink-0" />
             <div className="text-sm">linkedin</div>

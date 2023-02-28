@@ -25,13 +25,13 @@ const Feed: React.FC<Props> = ({ tags, posts }) => {
         <Lists.TagList className="block lg:hidden" data={tags} />
         <PostHeader tags={tags} />
         <Lists.PostList q={q} posts={posts} tags={tags} />
-        <Footer className="block lg:hidden flex justify-center pb-8" />
+        <Footer className="lg:hidden justify-center" />
       </div>
       <div className="hidden lg:block lg:col-span-3">
         <Cards.ProfileCard />
         {/* <Cards.ServiceCard /> */}
         <Cards.ContactCard />
-        <Footer className="pt-4" />
+        <Footer className="" />
       </div>
     </div>
   )

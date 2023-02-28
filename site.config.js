@@ -12,7 +12,7 @@ const CONFIG = {
     role: "full-stack developer",
     bio: "I develop everything using node.",
     email: "harris91@kakao.com",
-    linkedin: "harris91",
+    linkedin: "",
     github: "harris91",
     instagram: "",
   },
