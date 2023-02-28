@@ -73,6 +73,11 @@ pre[class*="language-"] {
   @apply w-auto;
   @apply px-0;
 }
+
+.notion, .notion-h-title, .notion-quote, .notion-text {
+  line-height: 1.5rem;
+}
+
 .notion-quote {
   padding: 0.2em 0.9em;
   font-size: 1.0em;

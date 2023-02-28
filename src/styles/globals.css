@@ -300,6 +300,7 @@ pre[class*=language-] {
 
 .token.attr-value,.token.char,.token.regex,.token.string,.token.variable {
   color: #00e676 !important;
+  background:none !important;
 }
 
 .token.entity,.token.operator,.token.url {
