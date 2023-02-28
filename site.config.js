@@ -32,7 +32,7 @@ const CONFIG = {
     themeToggle: true,
     themeColor: {
       dark: "#121826",
-      light: "#f1f3f5"
+      light: "#fff"
     },
   },
 

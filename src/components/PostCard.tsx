@@ -34,7 +34,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
               />
             </div>
           )}
-          <div className="p-1 md:p-4">
+          <div className="py-4 px-2 md:px-4">
             <header className="flex flex-col justify-between md:flex-row md:items-baseline">
               <h2 className="text-xl md:text-2xl font-medium cursor-pointer text-black dark:text-gray-100 hover:font-semibold transition-all"
                 onClick={() => readPost(post.slug)}>

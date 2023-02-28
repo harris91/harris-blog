@@ -13,7 +13,7 @@ const ThemeToggle: React.FC<Props> = () => {
     if (typeof window === "object") {
       setTheme(getTheme()) 
 
-      // 자동 테마
+      // 자동 테마 (localStorage에 설정된 정보가 없느 경우)
       window.matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', event => {
         if(!("theme" in localStorage)) {
@@ -30,7 +30,7 @@ const ThemeToggle: React.FC<Props> = () => {
     changedTheme === "dark"
     ? document.documentElement.classList.add("dark")
     : document.documentElement.classList.remove("dark")
-    
+
     // 상단 테마 변경
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', CONFIG.blog.themeColor[changedTheme]);
   }
