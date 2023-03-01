@@ -133,3 +133,12 @@ pre[class*="language-"] {
 .notion-simple-table td {
   border: 1px solid rgb(68 68 68);
 }
+
+/* 이미지 좌측으로 */
+.notion-asset-wrapper-image > div {
+  align-self: flex-start !important;
+}
+/* 이미지 radius */
+.notion-asset-wrapper img {
+  border-radius: 10px;
+}
