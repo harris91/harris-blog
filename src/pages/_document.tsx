@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
 import CONFIG from "site.config"
+import Script from "next/script"
 import CJK from "@libs/cjk"
 import Meta from '@components/Meta'
 
@@ -65,6 +66,9 @@ class MyDocument extends Document {
             crossOrigin="anonymous">
             </script>
           )}
+
+          {/* PWA 준비 */}
+          <link rel="manifest" href="./manifest.json"/>
           
         </Head>
         <body className="md:bg-day dark:bg-night">

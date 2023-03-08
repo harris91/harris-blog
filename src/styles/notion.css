@@ -87,8 +87,14 @@ pre[class*="language-"] {
 }
 
 .notion-link {
-  color:rgb(14 165 233/var(--tw-text-opacity));
-  border-color:rgb(14 165 233/var(--tw-text-opacity));
+  color: #0EA5E9;
+  border-color:#0EA5E9;
+  opacity: 1;
+}
+
+.notion-link:hover {
+  color: #38bdf8;
+  border-color:#38bdf8;
 }
 
 .notion-inline-code {
@@ -126,4 +132,13 @@ pre[class*="language-"] {
 
 .notion-simple-table td {
   border: 1px solid rgb(68 68 68);
+}
+
+/* 이미지 좌측으로 */
+.notion-asset-wrapper-image > div {
+  align-self: flex-start !important;
+}
+/* 이미지 radius */
+.notion-asset-wrapper img {
+  border-radius: 10px;
 }

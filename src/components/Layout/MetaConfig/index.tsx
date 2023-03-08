@@ -17,7 +17,7 @@ const MetaConfig: React.FC<MetaConfigProps> = ({ ...props }) => {
 
   return (
     <Head>
-      <title>{meta.title}</title>
+      <title>{meta.title} - {CONFIG.blog.title} 블로그</title>
       <meta name="robots" content="follow, index" />
       <meta charSet="UTF-8" />
       {CONFIG.seo.keywords && (
@@ -32,10 +32,10 @@ const MetaConfig: React.FC<MetaConfigProps> = ({ ...props }) => {
       {CONFIG.lang && <meta property="og:locale" content={CONFIG.lang} />}
       {meta.image && <meta property="og:image" content={meta.image} />}
       {/* twitter */}
-      <meta name="twitter:title" content={meta.title} />
+      {/* <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:card" content="summary_large_image" />
-      {meta.image && <meta name="twitter:image" content={meta.image} />}
+      {meta.image && <meta name="twitter:image" content={meta.image} />} */}
       {/* post */}
       {meta.type === "Post" && (
         <>
