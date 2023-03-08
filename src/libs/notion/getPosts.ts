@@ -49,6 +49,13 @@ export async function getPosts() {
       const dateB: any = new Date(b?.date?.start_date || b.createdTime)
       return dateB - dateA
     })
+
+    // Sort Tags 태그 정렬
+    data.map(post => {
+      if(post.tags) post = post.tags.sort()
+      return post;
+    })
+
     return data as TPosts
   }
 }

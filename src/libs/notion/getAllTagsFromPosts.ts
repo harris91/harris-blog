@@ -2,7 +2,7 @@ import { TPosts } from '@/src/types'
 
 export function getAllTagsFromPosts(posts: TPosts) {
   const taggedPosts = posts.filter((post) => post?.tags)
-  const tags = [...taggedPosts.map((p) => p.tags).flat()]
+  const tags = [...taggedPosts.map((p) => p.tags).flat().sort()]
   const tagObj: { [tagName: string]: number } = {}
   tags.forEach((tag) => {
     if (!tag) return
