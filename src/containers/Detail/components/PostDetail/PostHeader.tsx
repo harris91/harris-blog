@@ -4,14 +4,26 @@ import { TPost } from "@/src/types"
 import { formatDate } from "@/src/libs/utils"
 import Image from "next/image"
 import React from "react"
+import { useRouter } from 'next/router'
 
 type Props = {
   data: TPost
 }
 
 const PostHeader: React.FC<Props> = ({ data }) => {
+  const router = useRouter()
   return (
     <>
+      <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400">
+        <span>
+          <button
+            onClick={() => router.push('/')}
+            className="cursor-pointer hover:text-black dark:hover:text-gray-100"
+          >
+            ← Back
+          </button>
+        </span>
+      </div>
       <h1 className="font-bold text-3xl text-black dark:text-white">
         {data.title}
       </h1>
