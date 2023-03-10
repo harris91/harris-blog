@@ -11,7 +11,7 @@ const CustomError: React.FC<Props> = ({ errorType }) => {
       className={`m-auto max-w-4xl bg-white dark:bg-gray-800 rounded-xl py-12 px-6 shadow-md`}
     >
       <div className="py-20 flex flex-col items-center gap-10">
-        <div className="text-6xl flex  items-center">
+        <div className="text-7xl flex  items-center">
           <div>4</div>
           <Image src="/images/error.png" width={60} height={60} alt="error" />
           <div>4</div>

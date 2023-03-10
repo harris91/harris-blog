@@ -140,5 +140,5 @@ pre[class*="language-"] {
 }
 /* 이미지 radius */
 .notion-asset-wrapper img {
-  border-radius: 10px;
+  border-radius: 18px;
 }
