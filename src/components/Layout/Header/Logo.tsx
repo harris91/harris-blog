@@ -31,7 +31,8 @@ const Logo: React.FC<Props> = () => {
             />
           </div>
           <div className="ml-1 text-black dark:text-white header-name text-2xl font-bold">
-            {CONFIG.blog.title}
+            {CONFIG.blog.title}&nbsp;
+            <span className="invisible sm:visible text-lg font-normal">블로그</span>
           </div>
         </div>
       </span>
