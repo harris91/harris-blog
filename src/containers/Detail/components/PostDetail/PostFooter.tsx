@@ -2,12 +2,23 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Tag from "@components/Tag"
 import { TPost } from "@/src/types"
+import { useEffect, useState } from "react"
 
 type Props = {
   data: TPost
 }
 
 const Footer: React.FC<Props> = ({ data }) => {
+  let [showButton, setShowButton] = useState(false);
+  const handleScroll = () => {
+    setShowButton(showButton = window.scrollY > 500 ? true : false)
+  }
+  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll) //mount
+    return () => window.removeEventListener("scroll",handleScroll) //unmount
+  }, [])
+  
   const router = useRouter()
   return (
 
@@ -37,10 +48,20 @@ const Footer: React.FC<Props> = ({ data }) => {
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
-          >
+            >
             ↑ Top
           </button>
         </span>
+
+        {/* 상단 이동 버튼 */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className={`${showButton ? 'lg:visible opacity-100' : 'opacity-0'} 
+          invisible fixed bottom-8 right-8 cursor-pointer rounded-full text-lg bg-sky-500 text-white py-1 px-2.5 
+          duration-300 hover:font-bold hover:bg-sky-400`}
+        >
+          ↑
+        </button>
       </div>
     </>
   )
