@@ -15,7 +15,7 @@ const Tag: React.FC<Props> = ({ children }) => {
   return (
     <span 
       onClick={(event) => handleClick(event, children)}
-      className="cursor-pointer mr-1 mb-2 text-xs md:text-sm font-medium uppercase text-sky-500 hover:text-sky-600 dark:hover:text-sky-400">
+      className="cursor-pointer mr-1 mb-2 text-xs sm:text-sm font-medium uppercase text-sky-500 hover:text-sky-600 dark:hover:text-sky-400">
         {children}
     </span>
   )

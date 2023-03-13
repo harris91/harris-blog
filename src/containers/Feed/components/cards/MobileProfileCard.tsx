@@ -7,8 +7,13 @@ type Props = {
 }
 
 const getProfileImage = () => {
-  const random = Math.ceil(Math.random()*CONFIG.profile.maxNum);
-  return CONFIG.profile.randomImage + random + CONFIG.profile.ext;
+  if(CONFIG.profile.isRandom) {
+    const random = Math.ceil(Math.random()*CONFIG.profile.maxNum)
+    return CONFIG.profile.randomImage + random + CONFIG.profile.ext
+  } 
+  else {
+    return CONFIG.profile.image
+  }
 }
 
 const MobileProfileCard: React.FC<Props> = () => {

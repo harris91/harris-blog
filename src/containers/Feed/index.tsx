@@ -18,20 +18,20 @@ const Feed: React.FC<Props> = ({ tags, posts }) => {
 
   return (
     <div className="block md:grid grid-cols-12 gap-6">
-      <Lists.TagList className="hidden lg:block col-span-2" data={tags} />
-      <div className="col-span-12 lg:col-span-7">
+      {/* <Lists.TagList className="hidden lg:block col-span-2" data={tags} /> */}
+      <div className="hidden lg:block lg:col-span-3">
+        <Cards.ProfileCard />
+        {/* <Cards.ServiceCard /> */}
+        <Cards.ContactCard />
+        <Footer className="" />
+      </div>
+      <div className="col-span-12 lg:col-span-9">
         <Cards.MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <Lists.TagList className="block lg:hidden" data={tags} />
         <PostHeader tags={tags} />
         <Lists.PostList q={q} posts={posts} tags={tags} />
         <Footer className="lg:hidden justify-center" />
-      </div>
-      <div className="hidden lg:block lg:col-span-3">
-        <Cards.ProfileCard />
-        {/* <Cards.ServiceCard /> */}
-        <Cards.ContactCard />
-        <Footer className="" />
       </div>
     </div>
   )

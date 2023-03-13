@@ -7,14 +7,18 @@ type Props = {
 }
 
 const getProfileImage = () => {
-  const random = Math.ceil(Math.random()*CONFIG.profile.maxNum);
-  return CONFIG.profile.randomImage + random + CONFIG.profile.ext;
+  if(CONFIG.profile.isRandom) {
+    const random = Math.ceil(Math.random()*CONFIG.profile.maxNum)
+    return CONFIG.profile.randomImage + random + CONFIG.profile.ext
+  } 
+  else {
+    return CONFIG.profile.image
+  }
 }
 
 const ProfileCard: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
-      <div className="p-1 mb-3 dark:text-white">🍟 Profile</div>
       <div className="w-full md:p-4 lg:p-4 rounded-md dark:bg-gray-800 mb-4">
         <div className="relative w-full after:content-[''] after:block after:pb-[100%]">
           <Image src={getProfileImage()} layout="fill" alt="" />

@@ -2,9 +2,10 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "HARRIS91",
-    image: "/emoji/profile3.png", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    image: "/emoji/profile.png", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
 
     //Random Image set
+    isRandom: false,
     randomImage: "/emoji/profile", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     ext: ".png",
     maxNum: 6,
@@ -39,7 +40,7 @@ const CONFIG = {
   // CONFIG configration (required)
   link: "https://harris91.vercel.app",
   since: 2022, // If leave this empty, current year will be used.
-  lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
+  lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR'] // 날짜 포맷 형식 적용
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
   seo: {
     keywords: ["Blog", "Website", "Notion"],
