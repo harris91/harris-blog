@@ -9,7 +9,7 @@ import CustomError from "../containers/CustomError"
 export async function getStaticPaths() {
   const posts = await getPosts()
   const filteredPost = filterPosts(posts, {
-    acceptStatus: ["Public", "PublicOnDetail"],
+    publicType: "Yes",
     acceptType: ["Paper", "Post", "Page"],
   })
 
