@@ -1,11 +1,8 @@
-# Harris91 - Blog
-> ### 'harris-log' was customized from the open source of 'morethan-log'.
-
-<br>
+# harris-blog
+![image](https://user-images.githubusercontent.com/57648788/224872954-05a921c7-5d7a-4892-bc25-4e2bd010caf9.png)
 
 Next.js static blog using Notion as a Content Management System (CMS). Supports both Blog format Post as well as Page format for Resume. Deployed using Vercel.
 
-[Demo Blog](https://morethan-log.vercel.app) | [Demo Resume](https://morethan-log.vercel.app/resume)
 
 ## Features
 
@@ -48,7 +45,7 @@ Check out the [Contributing Guide](.github/CONTRIBUTING.md).
 
 ## Support
 
-morethan-log is an MIT-licensed open source project. 
+[harris-blog](https://github.com/harris91/harris-blog) is an MIT-licensed open source project.<br>This project was customized from the open source of [morethan-log](https://github.com/morethanmin/morethan-log)
 
 ## License
 
