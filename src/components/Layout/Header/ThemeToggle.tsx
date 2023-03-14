@@ -50,7 +50,7 @@ const ThemeToggle: React.FC<Props> = () => {
           type: 'set-theme',
           theme: `github-${changedTheme}`
         }
-        utterances?.contentWindow?.postMessage(message, 'https://utteranc.es')
+        utterances.contentWindow?.postMessage(message, 'https://utteranc.es')
       }
     }
   }

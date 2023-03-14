@@ -33,7 +33,7 @@ const Utterances: React.FC<Props> = ({ issueTerm }) => {
 
   return (
     <>
-      <div id="comments" className="md:-ml-10 max-w-full"></div>
+      <div id="comments" className="max-w-full"></div>
     </>
   )
 }
