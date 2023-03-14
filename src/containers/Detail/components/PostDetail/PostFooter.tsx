@@ -58,7 +58,7 @@ const Footer: React.FC<Props> = ({ data }) => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className={`${showButton ? 'lg:visible opacity-100' : 'opacity-0'} 
           invisible fixed bottom-8 right-8 cursor-pointer rounded-full text-lg bg-sky-500 text-white py-1 px-2.5 
-          duration-300 hover:font-bold hover:bg-sky-400`}
+          duration-300 hover:bg-sky-400 hover:mb-1`}
         >
           ↑
         </button>
