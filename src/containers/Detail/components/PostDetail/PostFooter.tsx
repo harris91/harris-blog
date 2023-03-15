@@ -28,7 +28,7 @@ const Footer: React.FC<Props> = ({ data }) => {
         오탈자 및 내용 피드백은 언제나 환영합니다.
       </p>
       {data.tags && (
-        <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags gap-2 mb-4">
+        <div className="flex flex-nowrap max-w-full overflow-x-auto gap-2 mb-4">
           {data.tags.map((tag: string) => (
             <Tag key={tag}>{tag}</Tag>
           ))}

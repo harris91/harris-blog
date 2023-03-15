@@ -1,82 +1,6 @@
-/* Pretandard 폰트 적용 */
-/*
-@font-face {
-	font-family: 'Pretendard Variable';
-	font-weight: 45 920;
-	font-style: normal;
-	font-display: swap;
-	src: local('Pretendard Variable'), url('../fonts/PretendardVariable.woff2') format('woff2-variations');
-}
-
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Thin.woff2') format('woff2'),
-    url('../fonts/Pretendard-Thin.woff') format('woff');
-    font-weight: 100;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-ExtraLight.woff2') format('woff2'),
-    url('../fonts/Pretendard-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Light.woff2') format('woff2'),
-    url('../fonts/Pretendard-Light.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Regular.woff2') format('woff2'),
-    url('../fonts/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Medium.woff2') format('woff2'),
-    url('../fonts/Pretendard-Medium.woff') format('woff');
-    font-weight: 500;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-SemiBold.woff2') format('woff2'),
-    url('../fonts/Pretendard-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Bold.woff2') format('woff2'),
-    url('../fonts/Pretendard-Bold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-ExtraBold.woff2') format('woff2'),
-    url('../fonts/Pretendard-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Pretendard';
-    src: url('../fonts/Pretendard-Black.woff2') format('woff2'),
-    url('../fonts/Pretendard-Black.woff') format('woff');
-    font-weight: 900;
-    font-display: swap;
-}
-*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 html {
   font-family: Pretendard Variable, Roboto, sans-serif;
@@ -113,103 +37,18 @@ body {
   flex-direction: column;
 }
 
-.sticky-nav {
-  position: sticky;
-  z-index: 10;
-  top: -1px;
-  backdrop-filter: blur(5px);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
-  border-bottom-color: transparent;
-}
 
-.remove-sticky {
-  position: unset;
-}
 
-.sticky-nav-full {
-  @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
-}
-
-.header-name {
-  /* display: none; */
-  opacity: 1;
-  /* opacity: 0; */
-  overflow: hidden;
-}
-
-.sticky-nav-full .nav {
-  @apply text-gray-600 dark:text-gray-300;
-}
-
-nav {
-  flex-wrap: wrap;
-  line-height: 1.5em;
-}
-
-.article-tags::-webkit-scrollbar {
-  width: 0 !important;
-}
-
-.tag-container ul::-webkit-scrollbar {
-  width: 0 !important;
-}
-
-.tag-container ul {
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
-}
 
 .mobile-x-scroll {
   overflow-x: scroll;
 }
 
-@media (max-width: 768px) {
-  .sticky-nav-full {
-    @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
-  }
-  .header-name {
-    display: block;
-    /* opacity: 0; */
-    transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
-  }
-  .sticky-nav-full .header-name {
-    opacity: 1;
-    @apply dark:text-gray-300 text-gray-600;
-  }
-}
-
-@supports not (backdrop-filter: none) {
-  .sticky-nav {
-    backdrop-filter: none;
-    @apply bg-day bg-opacity-90 dark:bg-night dark:bg-opacity-90;
-  }
-}
 
 @media (min-width: 768px) {
   .mobile-x-scroll {
     overflow-x: hidden;
   }
-}
-
-
-blockquote p {
-  font-size: 0.3em !important;
-}
-
-/* Kakao FE 코드 박스 CSS */
-.gatsby-highlight-code-line {
-  background-color: #022a4b;
-  border-left: .35em solid #0687f0;
-  display: block;
-  margin-left: -1.2em;
-  margin-right: -1.2em;
-  padding-left: .75em;
-  padding-right: 1em
 }
 
 code[class*=language-],pre[class*=language-] {
@@ -246,17 +85,6 @@ pre[class*=language-] {
   text-shadow: none !important;
   padding: 1.2em
 }
-
-/* //포스트 코드박스 css
-@media screen and (max-width: 730px) {
-  pre[class*=language-] {
-      border-radius: .3rem;
-      margin: 1.5em -1.2rem;
-      width: calc(100% + 2.4rem);
-      text-shadow: none !important;
-  }
-}
-*/
 
 :not(pre)>code[class*=language-],pre[class*=language-] {
   background: #1f2937 !important;
