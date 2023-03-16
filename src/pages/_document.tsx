@@ -1,19 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from "next/document"
 import CONFIG from "site.config"
-import Script from "next/script"
-import CJK from "@libs/cjk"
-import Meta from '@components/Meta'
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang={CONFIG.lang}>
         <Head>
-          {/* <link
-            rel="preload"
-            as="font"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
-          /> */}
 
           {/* pretendard 폰트 적용 */}
           <link 

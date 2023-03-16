@@ -65,7 +65,7 @@ const CONFIG = {
     },
   },
   googleAdsense: {
-    enable: true,
+    enable: false,
     config: {
       client: process.env.NEXT_PUBLIC_GOOGLE_ADSENSE || "",
     },

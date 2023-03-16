@@ -25,17 +25,16 @@ const Layout: React.FC<Props> = ({
       <MetaConfig {...metaConfig} />
       <div className={`wrapper`}>
         {metaConfig.type !== "Paper" && <Header fullWidth={fullWidth} />}
-
         <PullToRefresh 
           onRefresh={handleRefresh} 
-          pullDownThreshold={44}
+          pullDownThreshold={65}
           resistance={5}
-          maxPullDownDistance={45}
+          maxPullDownDistance={70}
           pullingContent={<Pull/>}
           // refreshingContent={<Refresh/>}
         >
           <main
-            className={`m-auto flex-grow w-full transition-all max-w-7xl px-4 ${
+            className={`m-auto flex-grow w-full transition-all max-w-7xl px-4 pb-12 ${
               fullWidth && "px-4 md:px-24"
             } ${metaConfig.type === "Paper" && "py-10"} `}
             >

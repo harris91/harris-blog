@@ -25,9 +25,9 @@ const Logo: React.FC<Props> = () => {
         <Transition
           as={Fragment}
           show={isShowing}
-          enter="transform transition duration-[3000ms]"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
+          enter="transform transition duration-[1500ms]"
+          enterFrom="opacity-0 translate-y-2"
+          enterTo="opacity-100 translate-y-0"
         >
         <div className="flex items-center cursor-pointer">
             <div className="mt-1">

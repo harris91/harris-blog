@@ -22,7 +22,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
       <span>
         <article
           key={post.id}
-          className="overflow-hidden mb-2 md:mb-3 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 "
+          className="overflow-hidden mb-2 md:mb-3 border-b border-gray-200 dark:border-gray-700 "
         >
           {post.thumbnail && (
             <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-gray-800 ">

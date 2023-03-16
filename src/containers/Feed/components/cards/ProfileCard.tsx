@@ -23,7 +23,7 @@ const ProfileCard: React.FC<Props> = ({ className }) => {
         <div className="relative w-full after:content-[''] after:block after:pb-[100%]">
           <Image src={getProfileImage()} layout="fill" alt="" />
         </div>
-        <div className="bg-white p-2 flex flex-col items-center dark:bg-gray-800 dark:text-white">
+        <div className="p-2 flex flex-col items-center dark:text-white">
           <div className=" text-xl italic font-bold">{CONFIG.profile.name}</div>
           <div className="text-sm mb-4 text-gray-500 dark:text-gray-400">
             {CONFIG.profile.role}
