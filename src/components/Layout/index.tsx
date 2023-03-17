@@ -4,7 +4,7 @@ import MetaConfig, { MetaConfigProps } from "./MetaConfig"
 import PullToRefresh from 'react-simple-pull-to-refresh';
 
 import Pull from "./PullToRefresh/Pull";
-// import Refresh from "./PullToRefresh/Refresh";
+import Refresh from "./PullToRefresh/Refresh";
 
 type Props = {
   children: React.ReactNode
@@ -27,11 +27,11 @@ const Layout: React.FC<Props> = ({
         {metaConfig.type !== "Paper" && <Header fullWidth={fullWidth} />}
         <PullToRefresh 
           onRefresh={handleRefresh} 
-          pullDownThreshold={65}
+          pullDownThreshold={80}
           resistance={5}
-          maxPullDownDistance={70}
+          maxPullDownDistance={90}
           pullingContent={<Pull/>}
-          // refreshingContent={<Refresh/>}
+          refreshingContent={<Refresh/>}
         >
           <main
             className={`m-auto flex-grow w-full transition-all max-w-7xl px-4 pb-12 ${

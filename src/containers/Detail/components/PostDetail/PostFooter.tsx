@@ -3,6 +3,7 @@ import React from 'react'
 import Tag from "@components/Tag"
 import { TPost } from "@/src/types"
 import { useEffect, useState } from "react"
+import { FaArrowUp } from "react-icons/fa";
 
 type Props = {
   data: TPost
@@ -57,10 +58,10 @@ const Footer: React.FC<Props> = ({ data }) => {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className={`${showButton ? 'lg:visible opacity-100' : 'opacity-0'} 
-          invisible fixed bottom-8 right-8 cursor-pointer rounded-full text-lg bg-sky-500 text-white py-1 px-2.5 
+          invisible fixed bottom-8 right-8 cursor-pointer rounded-full text-lg bg-sky-500 text-white p-3
           duration-300 hover:bg-sky-400 hover:mb-1`}
         >
-          ↑
+          <FaArrowUp/>
         </button>
       </div>
     </>
