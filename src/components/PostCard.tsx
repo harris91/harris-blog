@@ -35,54 +35,54 @@ const PostCard: React.FC<Props> = ({ post }) => {
             </div>
           )}
           <div className="py-4 px-2 md:px-4">
-            <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-              <h2 className="text-xl md:text-2xl font-medium cursor-pointer text-black dark:text-gray-100 hover:font-semibold transition-all"
-                onClick={() => readPost(post.slug)}>
-                {post.title}
-              </h2>
-            </header>
-
-            <div className="flex gap-2">
-              {post.tags &&
-                post.tags.map((tag: string, idx: number) => (
-                  <Tag key={idx}>{tag}</Tag>
-                ))}
-            </div>
-            
-            <main className="my-2 md:my-3">
-              <p className="leading-tight md:leading-8 text-sm md:text-base text-gray-700 dark:text-gray-400">
-                {post.summary}
-              </p>
-            </main>
-            <div className="flex items-center gap-2 mt-6 mb-2">
-              {/* {post.author && post.author[0] && (
-                <>
-                  <div className="flex items-center gap-1">
-                    <Image
-                      className="rounded-full"
-                      src={post.author[0].profile_photo}
-                      alt="profile_photo"
-                      loader={imageLoader}
-                      width={20}
-                      height={20}
-                    />
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      {`${post.author[0].last_name}${post.author[0].first_name}`}
-                    </div>
-                  </div>
-                  <div className="self-stretch w-px my-1 bg-gray-300"></div>
-                </>
-              )} */}
-              <div className="relative text-xs md:text-sm text-gray-500 dark:text-gray-400 w-full">
-                {formatDate(
-                  post?.date?.start_date || post.createdTime,
-                  CONFIG.lang
-                )}
-                <span 
-                  className="absolute top-0 right-0 cursor-pointer mr-1 mb-2 text-xs md:text-sm font-medium text-sky-500 hover:text-sky-600 dark:hover:text-sky-400"
+              <div className="flex gap-2">
+                {post.tags &&
+                  post.tags.map((tag: string, idx: number) => (
+                    <Tag key={idx}>{tag}</Tag>
+                  ))}
+              </div>
+              <header className="flex flex-col justify-between md:flex-row md:items-baseline">
+                <h2 className="text-xl md:text-[21px] cursor-pointer dark:text-gray-100 font-bold"
                   onClick={() => readPost(post.slug)}>
-                  Read more →
-                </span>
+                  {post.title}
+                </h2>
+              </header>
+
+              
+              <main className="my-2 md:my-3">
+                <p className="leading-tight md:leading-8 text-sm md:text-[15px] dark:text-gray-400 font-normal">
+                  {post.summary}
+                </p>
+              </main>
+              <div className="flex items-center gap-2 mt-6 mb-2">
+                {/* {post.author && post.author[0] && (
+                  <>
+                    <div className="flex items-center gap-1">
+                      <Image
+                        className="rounded-full"
+                        src={post.author[0].profile_photo}
+                        alt="profile_photo"
+                        loader={imageLoader}
+                        width={20}
+                        height={20}
+                      />
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        {`${post.author[0].last_name}${post.author[0].first_name}`}
+                      </div>
+                    </div>
+                    <div className="self-stretch w-px my-1 bg-gray-300"></div>
+                  </>
+                )} */}
+                <div className="relative text-xs md:text-sm text-gray-500 dark:text-gray-400 w-full">
+                  {formatDate(
+                    post?.date?.start_date || post.createdTime,
+                    CONFIG.lang
+                  )}
+                  <span 
+                    className="absolute top-0 right-0 cursor-pointer mr-1 mb-2 text-xs md:text-sm font-light text-sky-500 hover:text-sky-600 dark:hover:text-sky-400"
+                    onClick={() => readPost(post.slug)}>
+                    Read more →
+                  </span>
               </div>
             </div>
           </div>

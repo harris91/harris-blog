@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 html {
-  font-family: Pretendard Variable, Roboto, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
+  color: #292929; /*default text color*/
 }
 body {
   scrollbar-width: thin;

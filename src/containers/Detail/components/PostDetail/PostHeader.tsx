@@ -24,7 +24,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
           </button>
         </span>
       </div>
-      <h1 className="font-bold text-3xl text-black dark:text-white">
+      <h1 className="font-bold text-3xl dark:text-white">
         {data.title}
       </h1>
       {data.type[0] !== "Paper" && (

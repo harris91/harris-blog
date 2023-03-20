@@ -33,7 +33,7 @@ const Header: React.FC<Props> = ({ tags }) => {
         <span
           className={`cursor-pointer ${
             currentOrder === 'desc'
-              ? 'text-black font-bold dark:text-white'
+              ? 'font-bold dark:text-white'
               : 'text-gray-500 dark:text-gray-400'
           }`}
           onClick={() => handleClickOrderBy('desc')}
@@ -43,7 +43,7 @@ const Header: React.FC<Props> = ({ tags }) => {
         <span
           className={`cursor-pointer ${
             currentOrder === 'asc'
-              ? 'text-black font-bold dark:text-white'
+              ? 'font-bold dark:text-white'
               : 'text-gray-500 dark:text-gray-400'
           }`}
           onClick={() => handleClickOrderBy('asc')}

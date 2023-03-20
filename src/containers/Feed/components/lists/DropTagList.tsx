@@ -26,9 +26,9 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
     <div className={className}>
       <Menu as="div" className="w-full inline-block text-left">
         <div>
-          <Menu.Button className="text-md inline-flex w-full justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
+          <Menu.Button className="inline-flex w-full justify-center focus:outline-none focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-opacity-75
           rounded-md px-4 py-2 text-sm font-medium 
-          text-sky-500 border border-2 border-sky-500 hover:bg-sky-500 hover:text-white
+          text-sky-500 border border-[1.5px] border-sky-500 hover:bg-sky-500 hover:text-white
           dark:bg-sky-500 dark:border-0 dark:py-2.5 dark:text-white dark:bg-opacity-60 dark:hover:bg-opacity-80">
             Tags
           </Menu.Button>
