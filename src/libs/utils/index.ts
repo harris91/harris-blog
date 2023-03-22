@@ -4,3 +4,8 @@ export function formatDate(date: any, local: any) {
   const res = d.toLocaleDateString(local, options)
   return res
 }
+
+export function formatDateObject(date: any) {
+  let d = new Date(date)
+  return {day: d.getDate(), month: d.toLocaleDateString('en-US', { month:'short'}), year: d.getFullYear()}
+}

@@ -24,12 +24,12 @@ const Header: React.FC<Props> = ({ tags }) => {
   }
 
   return (
-    <div className="flex border-b border-gray-200 dark:border-gray-700 mb-4 justify-between items-center ">
-      <div className="text-xl font-bold my-2 dark:text-white">
+    <div className="flex border-b border-gray-200 dark:border-gray-700 justify-between items-center ">
+      <div className="text-xl font-bold dark:text-white">
         {currentTag} Posts{' '}
         <span className="text-sm align-text-top">({tags[currentTag]})</span>
       </div>
-      <div className={`flex text-sm gap-2  `}>
+      <div className={`flex text-sm gap-2`}>
         <span
           className={`cursor-pointer ${
             currentOrder === 'desc'
