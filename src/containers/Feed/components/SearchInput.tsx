@@ -4,7 +4,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {}
 
 const SearchInput: React.FC<Props> = ({ ...props }) => {
   return (
-    <div className="mb-4 lg:mb-8 col-span-8 lg:col-span-9">
+    <div className="mb-4 lg:mb-8 float-left flex w-full ml-2">
       <div className="relative w-full">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             {/* search Icon */}

@@ -1,5 +1,5 @@
 import { TTags } from '@custeomTypes/index'
-import React from 'react'
+import React, {useState} from 'react'
 import { useRouter } from 'next/router'
 import { Menu, Transition } from '@headlessui/react'
 
@@ -12,8 +12,10 @@ type Props = {
 const DropTagList: React.FC<Props> = ({ className, data }) => {
   const router = useRouter()
   const currentTag = router.query.tag || 'All'
+  const [selectedTag, setSelectedTag] = useState('All')
 
   const handleClickTag = (value: any) => {
+    setSelectedTag(value);
     router.push({
       query: {
         ...router.query,
@@ -30,7 +32,7 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
           rounded-md px-4 py-2 text-sm font-medium 
           text-sky-500 border border-[1.5px] border-sky-500 hover:bg-sky-500 hover:text-white
           dark:bg-sky-500 dark:border-0 dark:py-2.5 dark:text-white dark:bg-opacity-60 dark:hover:bg-opacity-80">
-            Tags
+            #{selectedTag !== 'All' && selectedTag}
           </Menu.Button>
         </div>
         <Transition

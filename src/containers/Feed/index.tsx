@@ -27,8 +27,8 @@ const Feed: React.FC<Props> = ({ tags, posts }) => {
       </div>
       <div className="col-span-12 lg:col-span-9">
         <Cards.MobileProfileCard />
-        <div className="grid grid-cols-12 gap-4">
-          <Lists.DropTagList className="relative col-span-4 lg:col-span-3" data={tags} />
+        <div className="flex">
+          <Lists.DropTagList className="relative float-left" data={tags} />
           <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         </div>
         {/* <Lists.TagList className="block lg:hidden" data={tags} /> */}
