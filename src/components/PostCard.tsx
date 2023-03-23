@@ -14,7 +14,7 @@ const getDefaultTumbnail = function(date:any) {
   const dateObj = formatDateObject(date);
   return (
     <div className="text-center flex justify-center items-center h-full">
-      <div className="thumb-text">
+      <div className="text-gray-700 dark:text-gray-400">
         <span className="font-extrabold text-5xl md:text-7xl">
           {dateObj.day}
         </span>
@@ -44,7 +44,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
           key={post.id}
           className="overflow-hidden my-2 sm:py-2 sm:px-4 border-b border-gray-200 dark:border-gray-700 sm:grid sm:grid-cols-5 sm:gap-4"
         >
-            <div className="hidden sm:block relative my-auto h-0 w-[100%] pb-[100%] sm:col-span-1 cursor-pointer border border-gray-200 dark:border-gray-800 rounded-lg"
+            <div className="hidden sm:block relative my-auto h-0 w-[100%] pb-[100%] sm:col-span-1 cursor-pointer border border-gray-200 dark:border-gray-800 clay-1 rounded-3xl"
               onClick={() => readPost(post.slug)}
               onMouseEnter={() => {setHoverTitle(true)}}
               onMouseLeave={() => {setHoverTitle(false)}}
@@ -52,23 +52,18 @@ const PostCard: React.FC<Props> = ({ post }) => {
             {post.thumbnail ? (
               <Image
                 src={post.thumbnail}
-                className="object-cover rounded-lg"
+                className={`object-cover transition-all rounded-3xl ${isHoverTitle ? 'brightness-100' : 'brightness-90'}`}
                 layout="fill"
                 alt={post.title}
                 loading="lazy"
               />
             ):(
-              <div className="absolute left-0 top-0 w-full h-full bg-gray-400/20 dark:bg-gray-800/30  rounded-lg">
-                {getDefaultTumbnail(post?.date?.start_date)}
+              <div className="absolute left-0 top-0 w-full h-full ">
+                <div className={`w-full h-full transition-all ${isHoverTitle && 'scale-[1.1]'}`}>
+                  {getDefaultTumbnail(post?.date?.start_date)}
+                </div>
               </div>
             )}
-                  
-            {/* <div className={`
-                ${!isHoverTitle? "opacity-0" : "bg-gray-900 bg-opacity-80 "}
-                absolute left-0 top-0 w-full h-full transition-all duration-500 text-white
-            `}>
-            {post?.date?.start_date}
-            </div> */}
 
           </div>
           <div className="py-4 px-2 md:px-4 sm:col-span-4">
@@ -79,7 +74,8 @@ const PostCard: React.FC<Props> = ({ post }) => {
                   ))}
               </div>
               <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-                <h2 className="text-xl md:text-[21px] cursor-pointer dark:text-gray-100 font-bold hover:font-extrabold transition-all"
+                <h2 className={`text-xl md:text-[21px] cursor-pointer font-bold transition-all
+                  ${isHoverTitle ? 'text-sky-500 dark:text-sky-500' : 'dark:text-gray-100'}`}
                   onClick={() => readPost(post.slug)}
                   onMouseEnter={() => {setHoverTitle(true)}}
                   onMouseLeave={() => {setHoverTitle(false)}}
@@ -100,7 +96,10 @@ const PostCard: React.FC<Props> = ({ post }) => {
                   )}
                   <span 
                     className="absolute top-0 right-0 cursor-pointer mr-1 mb-2 text-xs md:text-sm font-light text-sky-500 hover:text-sky-600 dark:hover:text-sky-400"
-                    onClick={() => readPost(post.slug)}>
+                    onClick={() => readPost(post.slug)}
+                    onMouseEnter={() => {setHoverTitle(true)}}
+                    onMouseLeave={() => {setHoverTitle(false)}}
+                  >
                     Read more →
                   </span>
               </div>
