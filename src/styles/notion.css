@@ -131,7 +131,7 @@ pre[class*="language-"] {
 }
 
 .notion b {
-  @apply font-extrabold;
+  @apply font-extrabold dark:text-gray-300;
 }
 
 .notion-simple-table td {
