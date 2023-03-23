@@ -42,7 +42,7 @@ const PostCard: React.FC<Props> = ({ post }) => {
       <span>
         <article
           key={post.id}
-          className="overflow-hidden my-2 sm:py-2 px-4 border-b border-gray-200 dark:border-gray-700 sm:grid sm:grid-cols-5 sm:gap-4"
+          className="overflow-hidden my-2 sm:py-2 sm:px-4 border-b border-gray-200 dark:border-gray-700 sm:grid sm:grid-cols-5 sm:gap-4"
         >
             <div className="hidden sm:block relative my-auto h-0 w-[100%] pb-[100%] sm:col-span-1 cursor-pointer border border-gray-200 dark:border-gray-800 rounded-lg"
               onClick={() => readPost(post.slug)}

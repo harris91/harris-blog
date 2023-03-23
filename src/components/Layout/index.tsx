@@ -2,9 +2,7 @@ import Header from "./Header"
 import PropTypes from "prop-types"
 import MetaConfig, { MetaConfigProps } from "./MetaConfig"
 import PullToRefresh from 'react-simple-pull-to-refresh';
-
-import Pull from "./PullToRefresh/Pull";
-import Refresh from "./PullToRefresh/Refresh";
+import {Pull, Refresh} from "./PullToRefresh/Icon";
 
 type Props = {
   children: React.ReactNode
@@ -28,7 +26,7 @@ const Layout: React.FC<Props> = ({
         <PullToRefresh 
           onRefresh={handleRefresh} 
           pullDownThreshold={80}
-          resistance={5}
+          resistance={3}
           maxPullDownDistance={90}
           pullingContent={<Pull/>}
           refreshingContent={<Refresh/>}
