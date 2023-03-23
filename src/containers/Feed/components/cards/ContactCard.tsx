@@ -14,50 +14,59 @@ const ContactCard: React.FC = () => {
   return (
     <>
       <div className="p-1 mt-10 mb-3 dark:text-white">💬 Contact</div>
-      <ul className="rounded-md dark:bg-gray-800 p-1 flex flex-col">
+      <ul className="rounded-md dark:bg-gray-800 p-1 flex flex-col list-none">
         {CONFIG.profile.github && (
-          <a
-            href={`https://github.com/${CONFIG.profile.github}`}
-            rel="noreferrer"
-            target="_blank"
-            className={contactClass}
-          >
-            <AiOutlineGithub className="text-2xl" />
-            <div className="text-sm">github</div>
-          </a>
+
+          <li>
+            <a
+              href={`https://github.com/${CONFIG.profile.github}`}
+              rel="noreferrer"
+              target="_blank"
+              className={contactClass}
+            >
+              <AiOutlineGithub className="text-2xl" />
+              <div className="text-sm">github</div>
+            </a>
+          </li>
         )}
         {CONFIG.profile.instagram && (
-          <a
-            href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
-            rel="noreferrer"
-            target="_blank"
-            className={contactClass}
-          >
-            <AiOutlineInstagram className="text-2xl" />
-            <div className="text-sm">instagram</div>
-          </a>
+          <li>
+            <a
+              href={`https://www.instagram.com/${CONFIG.profile.instagram}`}
+              rel="noreferrer"
+              target="_blank"
+              className={contactClass}
+              >
+              <AiOutlineInstagram className="text-2xl" />
+              <div className="text-sm">instagram</div>
+            </a>
+          </li>
         )}
         {CONFIG.profile.email && (
-          <a
-            href={`mailto:${CONFIG.profile.email}`}
-            rel="noreferrer"
-            target="_blank"
-            className={contactClass}
-          >
-            <AiOutlineMail className="text-2xl flex-shrink-0" />
-            <div className="text-sm">email</div>
-          </a>
+          <li>
+            <a
+              href={`mailto:${CONFIG.profile.email}`}
+              rel="noreferrer"
+              target="_blank"
+              className={contactClass}
+            >
+              <AiOutlineMail className="text-2xl flex-shrink-0" />
+              <div className="text-sm">email</div>
+            </a>
+          </li>
         )}
         {CONFIG.profile.linkedin && (
-          <a
-            href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
-            rel="noreferrer"
-            target="_blank"
-            className={contactClass}
-          >
-            <AiFillLinkedin className="text-2xl flex-shrink-0" />
-            <div className="text-sm">linkedin</div>
-          </a>
+          <li>
+            <a
+              href={`https://www.linkedin.com/in/${CONFIG.profile.linkedin}`}
+              rel="noreferrer"
+              target="_blank"
+              className={contactClass}
+            >
+              <AiFillLinkedin className="text-2xl flex-shrink-0" />
+              <div className="text-sm">linkedin</div>
+            </a>
+          </li>
         )}
       </ul>
     </>
