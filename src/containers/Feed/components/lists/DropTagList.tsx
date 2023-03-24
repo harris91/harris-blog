@@ -11,9 +11,8 @@ type Props = {
 
 const DropTagList: React.FC<Props> = ({ className, data }) => {
   const router = useRouter()
-  const currentTag = router.query.tag || 'All'
-  const [selectedTag, setSelectedTag] = useState('All')
-
+  const currentTag = router.query.tag?.toString() || "All"
+  const showTag = (tag: String) => tag === 'All' ? '' : tag
   const handleClickTag = (value: any) => {
     setSelectedTag(value);
     router.push({
@@ -24,6 +23,7 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
     })
   }
   
+  const [selectedTag, setSelectedTag] = useState(currentTag)
   return (
     <div className={className}>
       <Menu as="div" className="w-full inline-block text-left">
@@ -32,7 +32,7 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
           rounded-md px-4 py-2 text-sm font-medium 
           text-sky-500 border border-[1.5px] border-sky-500 hover:bg-sky-500 hover:text-white
           dark:bg-sky-500 dark:border-0 dark:py-2.5 dark:text-white dark:bg-opacity-60 dark:hover:bg-opacity-80">
-            #{selectedTag !== 'All' && selectedTag}
+            #{showTag(currentTag)}
           </Menu.Button>
         </div>
         <Transition
@@ -45,7 +45,7 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute overflow-auto h-auto min-w-[150px] max-h-96 z-10 left-0 mt-2 w-full rounded-md border border-black 
-            dark:border-white border-opacity-20 dark:border-opacity-10 bg-opacity-80 backdrop-blur-md focus-visible:ring">
+            dark:border-white border-opacity-20 dark:border-opacity-10 bg-opacity-80 backdrop-blur focus-visible:ring">
           <div className="px-1 py-1 ">
             {Object.keys(data).map((key) => (
               <Menu.Item key={key}>
@@ -54,7 +54,7 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
                   className={`
                     group flex w-full items-center rounded-sm px-2 py-2 text-sm
                     ${ active ? 'bg-day bg-gray-400 bg-opacity-20 dark:text-white' : 'dark:text-white'} 
-                    ${ key === currentTag &&'text-sky-500 dark:text-sky-500 font-bold' }
+                    ${ key === currentTag &&'text-sky-600 dark:text-sky-600 font-bold' }
                   `}
                   onClick={() => handleClickTag(key)}
                 >
