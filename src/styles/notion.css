@@ -66,9 +66,11 @@ pre[class*="language-"] {
 .notion-viewport {
   z-index: -10;
 }
-.notion-asset-caption {
+.notion-asset-caption,
+.notion-asset-caption > a 
+{
   /* @apply text-center; */
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-gray-500 dark:text-gray-400 border-gray-400;
 }
 .notion-full-width {
   @apply px-0;
