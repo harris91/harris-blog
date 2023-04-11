@@ -45,15 +45,15 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute overflow-auto h-auto min-w-[150px] max-h-96 z-10 left-0 mt-2 w-full rounded-md border border-black 
-            dark:border-white border-opacity-20 dark:border-opacity-10 bg-opacity-80 backdrop-blur focus-visible:ring">
-          <div className="px-1 py-1 ">
+            dark:border-white border-opacity-20 dark:border-opacity-10 bg-opacity-80 backdrop-blur-lg focus-visible:ring">
+          <div className="px-1 py-1">
             {Object.keys(data).map((key) => (
               <Menu.Item key={key}>
               {({ active }) => (
                 <button
                   className={`
                     group flex w-full items-center rounded-sm px-2 py-2 text-sm
-                    ${ active ? 'bg-day bg-gray-400 bg-opacity-20 dark:text-white' : 'dark:text-white'} 
+                    ${ active ? 'bg-gray-400 bg-opacity-30 dark:text-white' : 'dark:text-white'} 
                     ${ key === currentTag &&'text-sky-600 dark:text-sky-600 font-bold' }
                   `}
                   onClick={() => handleClickTag(key)}
