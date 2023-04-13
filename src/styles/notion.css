@@ -146,5 +146,6 @@ pre[class*="language-"] {
 }
 /* 이미지 radius */
 .notion-asset-wrapper img {
-  border-radius: 18px;
+  @apply border border-gray-200 dark:border-gray-800;
+  border-radius: 9px;
 }
