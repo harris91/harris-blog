@@ -27,7 +27,7 @@ const Header: React.FC<Props> = ({ tags }) => {
     <div className="flex border-b border-gray-200 dark:border-gray-700 justify-between items-center ">
       <div className="text-xl font-bold dark:text-white">
         {currentTag} Posts{' '}
-        <span className="text-sm align-text-top">{tags[currentTag]}</span>
+        <span className="text-sm align-text-top">({tags[currentTag]})</span>
       </div>
       <div className={`flex text-sm gap-2`}>
         <span
