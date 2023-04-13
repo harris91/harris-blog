@@ -1,5 +1,5 @@
 # harris-blog
-![info](https://user-images.githubusercontent.com/57648788/231698889-afa81d7a-6ff3-4a9a-b4a5-c185d36cfa76.png)
+![info](https://user-images.githubusercontent.com/57648788/231699156-4c522586-818b-49a0-b8e0-f06bdb4c07b9.png)
 
 Next.js static blog using Notion as a Content Management System (CMS). Supports both Blog format Post as well as Page format for Resume. Deployed using Vercel.
 
