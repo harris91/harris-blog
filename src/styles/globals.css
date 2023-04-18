@@ -78,7 +78,7 @@ pre[class*=language-]::-webkit-scrollbar {
 
 pre[class*=language-] {
   border-radius: .6em;
-  margin: 1.5em 0;
+  margin: 0px;
   overflow: auto;
   text-shadow: none !important;
   padding: 1.2em
