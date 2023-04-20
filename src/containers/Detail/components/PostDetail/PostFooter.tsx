@@ -24,10 +24,13 @@ const Footer: React.FC<Props> = ({ data }) => {
   return (
 
     <>
-      <p className="text-center text-gray-500 dark:text-gray-400 mt-8 mb-2 py-12 bg-gray-100 dark:bg-gray-800">
-        긴 글 읽어주셔서 감사합니다. <br/>
-        오탈자 및 내용 피드백은 언제나 환영합니다.
-      </p>
+
+      {data.slug != 'about' && (
+        <p className="text-center text-gray-500 dark:text-gray-400 mt-8 mb-2 py-12 bg-gray-100 dark:bg-gray-800">
+          긴 글 읽어주셔서 감사합니다. <br/>
+          오탈자 및 내용 피드백은 언제나 환영합니다.
+        </p>
+      )}
       {data.tags && (
         <div className="flex flex-nowrap max-w-full overflow-x-auto gap-2 mb-4">
           {data.tags.map((tag: string) => (
