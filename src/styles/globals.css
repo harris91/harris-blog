@@ -14,7 +14,7 @@ body {
 }
 ::-webkit-scrollbar {
   width: 5px;
-  height:3px;
+  height:5px;
 }
 ::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
@@ -73,7 +73,7 @@ code[class*=language-],pre[class*=language-] {
 
 pre[class*=language-]::-webkit-scrollbar {
   text-shadow: none !important;
-  display: none
+  /* display: none */
 }
 
 pre[class*=language-] {
