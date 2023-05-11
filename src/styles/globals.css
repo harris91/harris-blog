@@ -29,6 +29,15 @@ body {
   background: rgba(45, 170, 219, 0.3);
 }
 
+img {
+  /* image-rendering: -moz-crisp-edges; firefox */
+  /* image-rendering: -o-crisp-edges; opera */
+  /* image-rendering: crisp-edges; */
+  image-rendering: -webkit-optimize-contrast; /* chrome(비표준) */
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
