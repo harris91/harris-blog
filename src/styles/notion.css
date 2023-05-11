@@ -140,6 +140,11 @@ pre[class*="language-"] {
   border: 1px solid rgb(68 68 68);
 }
 
+.notion-table-of-contents > a {
+  @apply text-gray-400 underline;
+}
+
+
 /* 이미지 좌측으로 */
 .notion-asset-wrapper-image > div {
   align-self: flex-start !important;
