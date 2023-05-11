@@ -1,10 +1,5 @@
-import {
-  NotionRenderer,
-  Equation,
-  Code,
-  Collection,
-  CollectionRow,
-} from "react-notion-x"
+import { NotionRenderer } from "react-notion-x"
+import dynamic from 'next/dynamic'
 import { TPost } from "@/src/types"
 import React from "react"
 import PostHeader from "./PostHeader"
@@ -14,6 +9,36 @@ import CommentBox from "./CommentBox"
 const mapPageUrl = (id: string) => {
   return "https://www.notion.so/" + id.replace(/-/g, "")
 }
+
+const Code = dynamic(() =>
+  import('react-notion-x/build/third-party/code').then((m) => m.Code as any)
+)
+const Collection = dynamic(() =>
+  import('react-notion-x/build/third-party/collection').then(
+    (m) => m.Collection as any
+  )
+)
+const Equation = dynamic(() =>
+  import('react-notion-x/build/third-party/equation').then(
+    (m) => m.Equation as any
+  )
+)
+const Pdf = dynamic(
+  () =>
+    import('react-notion-x/build/third-party/pdf').then((m) => m.Pdf as any),
+  {
+    ssr: false,
+  }
+)
+const Modal = dynamic(
+  () =>
+    import('react-notion-x/build/third-party/modal').then(
+      (m) => m.Modal as any
+    ),
+  {
+    ssr: false,
+  }
+)
 
 type Props = {
   blockMap: any
@@ -32,10 +57,11 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
             <NotionRenderer
               recordMap={blockMap}
               components={{
-                equation: Equation,
-                code: Code,
-                collection: Collection,
-                collectionRow: CollectionRow,
+                Code,
+                Collection,
+                Equation,
+                Modal,
+                Pdf,
               }}
               mapPageUrl={mapPageUrl}
             />
