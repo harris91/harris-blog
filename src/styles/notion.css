@@ -88,6 +88,7 @@ pre[class*="language-"] {
   padding: 0.2em 0.9em;
   font-size: 1.0em;
   font-style:italic;
+  background: #a3b6c31c;
   /* box-shadow: 4px 4px 8px #ccc;
   background: #f7f7f7; */
 }
