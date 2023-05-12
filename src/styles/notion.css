@@ -141,8 +141,11 @@ pre[class*="language-"] {
   border: 1px solid rgb(68 68 68);
 }
 
-.notion-table-of-contents > a {
-  @apply text-gray-400 underline;
+.notion-table-of-contents-item {
+  @apply text-gray-400;
+}
+.notion-table-of-contents-item-body {
+  @apply border-b-gray-400;
 }
 
 
