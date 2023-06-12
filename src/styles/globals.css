@@ -90,7 +90,7 @@ pre[class*=language-] {
   margin: 0px;
   overflow: auto;
   text-shadow: none !important;
-  padding: 1.2em
+  padding: 1.5em
 }
 
 :not(pre)>code[class*=language-],pre[class*=language-] {
