@@ -60,9 +60,9 @@ const Footer: React.FC<Props> = ({ data }) => {
         {/* 상단 이동 버튼 */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`${showButton ? 'lg:visible opacity-100' : 'opacity-0'} 
-          invisible fixed bottom-8 right-8 cursor-pointer rounded-full text-lg bg-sky-500 text-white p-3
-          duration-300 hover:bg-sky-400 hover:mb-1`}
+          className={`${showButton ? 'opacity-40 lg:opacity-100' : 'opacity-0'} 
+          z-20 fixed  p-3 text-lg bottom-8 right-8 cursor-pointer rounded-full  bg-sky-500 text-white 
+          duration-500 hover:bg-sky-400 hover:mb-1 hover:opacity-100`}
         >
           <FaArrowUp/>
         </button>
