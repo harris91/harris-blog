@@ -10,8 +10,8 @@ const CONFIG = {
     ext: ".png",
     maxNum: 6,
 
-    role: "full-stack developer",
-    bio: "I develop everything using node.",
+    role: "Full-Stack Developer",
+    bio: "I'm fairly curious person.",
     email: "harris91@kakao.com",
     linkedin: "",
     github: "harris91",
