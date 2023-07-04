@@ -63,7 +63,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="./manifest.json"/>
           
         </Head>
-        <body className="md:bg-day dark:bg-night">
+        <body className="bg-day dark:bg-night">
           <Main />
           <NextScript />
         </body>
