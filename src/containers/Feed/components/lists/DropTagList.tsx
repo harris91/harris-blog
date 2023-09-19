@@ -46,7 +46,7 @@ const DropTagList: React.FC<Props> = ({ className, data }) => {
         >
           <Menu.Items className="absolute overflow-auto h-auto min-w-[150px] max-h-96 z-10 left-0 mt-2 w-full 
             rounded-md border border-black dark:border-white border-opacity-20 dark:border-opacity-10 
-            bg-zinc-900 bg-opacity-70 backdrop-blur-xl focus-visible:ring">
+           bg-white dark:bg-zinc-900 bg-opacity-70 backdrop-blur-xl focus-visible:ring">
             <div className="px-1 py-1">
               {Object.keys(data).map((key) => (
                 <Menu.Item key={key}>
