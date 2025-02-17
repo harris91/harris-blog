@@ -216,3 +216,31 @@ pre[class*=language-] {
     bg-gradient-to-br from-gray-500 via-cyan-800  to-sky-800
     dark:from-sky-100 dark:via-rose-100 dark:to-sky-100;
 }
+
+
+/* mermaid - harris */
+language-mermaid svg {
+	fill: #eee !important;
+}
+
+
+rect.actor {
+	stroke: white !important;
+	fill: #293b54 !important;
+}
+
+pre[class*=language-mermaid] tspan, 
+pre[class*=language-mermaid] text 
+{
+	fill: #fff !important;
+	stroke: none !important;
+}
+
+pre[class*=language-mermaid] polygon {
+  fill: #6d3d75 !important
+}
+
+pre[class*=language-mermaid] line,
+pre[class*=language-mermaid] path {
+  stroke: white !important;
+}  
